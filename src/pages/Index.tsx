@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { Navbar } from '@/components/navbar';
 import { CountdownTimer } from '@/components/countdown-timer';
 import { EventCard } from '@/components/event-card';
-import { Calendar, Users, Trophy, BookOpen, Wrench, MapPin, Phone, Mail, QrCode } from 'lucide-react';
+import { Calendar, Users, Trophy, BookOpen, Wrench, MapPin, Phone, Mail, QrCode, ExternalLink } from 'lucide-react';
 
-// Import event images
+// Import assets
 import amoghaLogo from '@/assets/amogha-logo.png';
 import codeAThonImg from '@/assets/code-a-thon.jpg';
 import webAThonImg from '@/assets/web-a-thon.jpg';
@@ -21,6 +21,9 @@ const Index = () => {
     technicalQuiz: 298,
     workshop: 370
   });
+
+  // Poster URL (same as logo per user's requirement)
+  const posterUrl = "https://res.cloudinary.com/dirtmiqzt/image/upload/v1753934249/Amogha_Logo_awwxbu.png";
 
   const events = [
     {
@@ -104,56 +107,105 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen hero-bg">
       <Navbar />
       
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
-        <div className="max-w-6xl mx-auto text-center space-y-8">
-          <div className="animate-float">
-            <img 
-              src={amoghaLogo} 
-              alt="AMOGHA Logo" 
-              className="w-32 md:w-48 mx-auto glow"
-            />
-          </div>
-          
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-7xl font-bold text-gradient animate-fade-in">
-              AMOGHA – RIPPLE 2K25
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in">
-              National Level Student Technical Symposium
-            </p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-lg">
-              <div className="flex items-center space-x-2">
-                <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-semibold">19 | 20 September 2025</span>
+      {/* Hero Section with Poster Background */}
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 pt-24 overflow-hidden">
+        {/* Background Poster */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
+          style={{ 
+            backgroundImage: `url(${posterUrl})`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'right center'
+          }}
+        />
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-center lg:text-left space-y-8">
+            <div className="animate-float">
+              <img 
+                src={amoghaLogo} 
+                alt="AMOGHA Logo" 
+                className="w-24 md:w-32 mx-auto lg:mx-0 glow"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gradient animate-fade-in leading-tight">
+                AMOGHA
+                <br />
+                <span className="text-3xl md:text-5xl lg:text-6xl">RIPPLE 2K25</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in">
+                National Level Student Technical Symposium
+              </p>
+              <div className="flex flex-col space-y-4 text-lg">
+                <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <Calendar className="h-6 w-6 text-primary" />
+                  <span className="font-bold text-xl">19 | 20 September 2025</span>
+                </div>
+                <div className="flex items-center justify-center lg:justify-start space-x-3">
+                  <MapPin className="h-6 w-6 text-secondary" />
+                  <span className="text-muted-foreground">Rajeev Gandhi Memorial College of Engineering & Technology</span>
+                </div>
+                <p className="text-muted-foreground text-center lg:text-left">
+                  Departments of CSE (AI & ML) and CSE & BS
+                </p>
               </div>
-              <div className="hidden md:block text-muted-foreground">•</div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-5 w-5 text-secondary" />
-                <span>Rajeev Gandhi Memorial College of Engineering & Technology</span>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <button 
+                  onClick={() => window.open("https://forms.google.com", '_blank')}
+                  className="glass-button group flex items-center justify-center space-x-2"
+                >
+                  <span>Register Now</span>
+                  <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                </button>
+                <button 
+                  onClick={() => document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="glass-card px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300"
+                >
+                  Explore Events
+                </button>
               </div>
             </div>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Departments of CSE (AI & ML) and CSE & BS
-            </p>
           </div>
 
+          {/* Right Content - Poster Display */}
+          <div className="hidden lg:flex justify-center items-center">
+            <div className="glass-card p-8 rounded-3xl">
+              <img 
+                src={posterUrl} 
+                alt="AMOGHA RIPPLE 2K25 Poster" 
+                className="w-full max-w-md rounded-2xl glow-green animate-float"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Countdown Timer */}
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4">
           <CountdownTimer />
         </div>
       </section>
 
       {/* Events Section */}
-      <section id="events" className="py-20 px-4 observe-me">
+      <section id="events" className="py-24 px-4 observe-me bg-background/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
               Featured Events
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore our diverse range of technical competitions and learning opportunities
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Explore our diverse range of technical competitions and learning opportunities designed to showcase innovation and excellence
             </p>
           </div>
 

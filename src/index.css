@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    /* Light Mode Colors */
-    --background: 210 100% 98%;
-    --foreground: 215 25% 15%;
+    /* Light Mode - Professional Blue Theme */
+    --background: 220 25% 97%;
+    --foreground: 220 15% 15%;
 
-    /* Glassmorphism Base */
-    --glass-background: 210 100% 98% / 0.8;
-    --glass-border: 210 50% 85% / 0.3;
-    --glass-shadow: 210 50% 70% / 0.1;
+    /* Professional Glassmorphism */
+    --glass-background: 220 40% 98% / 0.85;
+    --glass-border: 220 60% 85% / 0.4;
+    --glass-shadow: 220 45% 65% / 0.15;
 
-    /* Primary Theme - Tech Blue */
-    --primary: 215 85% 55%;
+    /* Primary - Professional Blue */
+    --primary: 220 85% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 215 85% 70%;
+    --primary-glow: 220 85% 65%;
 
-    /* Secondary Theme - Tech Green */
-    --secondary: 155 85% 45%;
+    /* Secondary - Accent Blue */
+    --secondary: 200 90% 45%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 155 85% 60%;
+    --secondary-glow: 200 90% 65%;
 
     /* Accent Colors */
-    --accent: 195 100% 50%;
+    --accent: 240 100% 60%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 195 100% 70%;
+    --accent-glow: 240 100% 75%;
 
     /* Card System */
-    --card: 210 100% 98% / 0.7;
-    --card-foreground: 215 25% 15%;
-    --card-border: 210 50% 85% / 0.4;
+    --card: 220 40% 98% / 0.8;
+    --card-foreground: 220 15% 15%;
+    --card-border: 220 60% 85% / 0.5;
 
     /* Interactive Elements */
-    --muted: 210 20% 95%;
-    --muted-foreground: 215 15% 45%;
-    --border: 210 30% 90%;
-    --input: 210 100% 98% / 0.6;
-    --ring: 215 85% 55%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 15% 45%;
+    --border: 220 30% 88%;
+    --input: 220 40% 98% / 0.7;
+    --ring: 220 85% 50%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 85% 55%), hsl(195 100% 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(155 85% 45%), hsl(175 85% 55%));
-    --gradient-glass: linear-gradient(135deg, hsl(210 100% 98% / 0.9), hsl(210 100% 95% / 0.7));
-    --gradient-glow: radial-gradient(circle at center, hsl(215 85% 70% / 0.3), transparent 70%);
+    /* Professional Blue Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 85% 50%), hsl(200 90% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 90% 45%), hsl(240 100% 60%));
+    --gradient-glass: linear-gradient(135deg, hsl(220 40% 98% / 0.9), hsl(220 30% 95% / 0.8));
+    --gradient-bg: linear-gradient(135deg, hsl(220 25% 97%), hsl(220 30% 95%));
 
-    /* Glass Effects */
-    --backdrop-blur: blur(20px);
-    --glass-shadow-light: 0 8px 32px hsl(210 50% 70% / 0.15);
-    --glass-shadow-heavy: 0 16px 40px hsl(210 50% 70% / 0.25);
+    /* Professional Glass Effects */
+    --backdrop-blur: blur(25px);
+    --glass-shadow-light: 0 8px 32px hsl(220 45% 65% / 0.2);
+    --glass-shadow-heavy: 0 16px 48px hsl(220 45% 65% / 0.3);
 
     --radius: 1rem;
 
@@ -73,52 +73,52 @@
   }
 
   .dark {
-    /* Dark Mode Colors */
-    --background: 215 35% 8%;
+    /* Dark Mode - Professional Blue Theme */
+    --background: 220 25% 8%;
     --foreground: 0 0% 98%;
 
-    /* Dark Glassmorphism */
-    --glass-background: 215 35% 12% / 0.8;
-    --glass-border: 155 85% 45% / 0.3;
-    --glass-shadow: 155 85% 45% / 0.2;
+    /* Dark Professional Glassmorphism */
+    --glass-background: 220 30% 12% / 0.85;
+    --glass-border: 220 85% 60% / 0.4;
+    --glass-shadow: 220 85% 60% / 0.25;
 
-    /* Primary Theme - Bright Green Glass */
-    --primary: 155 85% 55%;
-    --primary-foreground: 215 35% 8%;
-    --primary-glow: 155 85% 70%;
+    /* Primary - Bright Professional Blue */
+    --primary: 220 85% 65%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 220 85% 80%;
 
-    /* Secondary Theme - Tech Blue */
-    --secondary: 215 85% 65%;
-    --secondary-foreground: 215 35% 8%;
-    --secondary-glow: 215 85% 80%;
+    /* Secondary - Light Blue */
+    --secondary: 200 90% 70%;
+    --secondary-foreground: 220 25% 8%;
+    --secondary-glow: 200 90% 85%;
 
     /* Accent Colors */
-    --accent: 175 90% 60%;
-    --accent-foreground: 215 35% 8%;
-    --accent-glow: 175 90% 75%;
+    --accent: 240 100% 75%;
+    --accent-foreground: 220 25% 8%;
+    --accent-glow: 240 100% 85%;
 
     /* Card System */
-    --card: 215 35% 12% / 0.7;
+    --card: 220 30% 12% / 0.8;
     --card-foreground: 0 0% 98%;
-    --card-border: 155 85% 45% / 0.4;
+    --card-border: 220 85% 60% / 0.5;
 
     /* Interactive Elements */
-    --muted: 215 25% 20%;
-    --muted-foreground: 215 15% 70%;
-    --border: 215 25% 25%;
-    --input: 215 35% 12% / 0.6;
-    --ring: 155 85% 55%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 70%;
+    --border: 220 25% 22%;
+    --input: 220 30% 12% / 0.7;
+    --ring: 220 85% 65%;
 
-    /* Dark Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(155 85% 55%), hsl(175 90% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(215 85% 65%), hsl(195 100% 70%));
-    --gradient-glass: linear-gradient(135deg, hsl(215 35% 12% / 0.9), hsl(215 35% 8% / 0.7));
-    --gradient-glow: radial-gradient(circle at center, hsl(155 85% 70% / 0.3), transparent 70%);
+    /* Dark Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 85% 65%), hsl(200 90% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 90% 70%), hsl(240 100% 75%));
+    --gradient-glass: linear-gradient(135deg, hsl(220 30% 12% / 0.9), hsl(220 25% 10% / 0.8));
+    --gradient-bg: linear-gradient(135deg, hsl(220 25% 8%), hsl(220 30% 10%));
 
-    /* Dark Glass Effects */
-    --backdrop-blur: blur(20px);
-    --glass-shadow-light: 0 8px 32px hsl(155 85% 45% / 0.2);
-    --glass-shadow-heavy: 0 16px 40px hsl(155 85% 45% / 0.3);
+    /* Dark Professional Glass Effects */
+    --backdrop-blur: blur(25px);
+    --glass-shadow-light: 0 8px 32px hsl(220 85% 60% / 0.25);
+    --glass-shadow-heavy: 0 16px 48px hsl(220 85% 60% / 0.35);
   }
 }
 
@@ -128,18 +128,26 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
-    background: var(--gradient-glass);
+    @apply bg-background text-foreground transition-colors duration-500;
+    background: var(--gradient-bg);
     min-height: 100vh;
   }
 
   html {
     scroll-behavior: smooth;
   }
+
+  /* Professional Background Pattern */
+  .hero-bg {
+    background: 
+      radial-gradient(circle at 20% 20%, hsl(220 85% 50% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(200 90% 55% / 0.1) 0%, transparent 50%),
+      var(--gradient-bg);
+  }
 }
 
 @layer utilities {
-  /* Glass Effect Utilities */
+  /* Professional Glass Effect Utilities */
   .glass {
     background: hsl(var(--glass-background));
     backdrop-filter: var(--backdrop-blur);
@@ -155,23 +163,27 @@
   }
 
   .glass-card {
-    @apply glass rounded-2xl p-6 hover:shadow-xl transition-all duration-300;
+    @apply glass rounded-2xl p-6 hover:glass-heavy transition-all duration-500;
+    border: 2px solid hsl(var(--glass-border));
   }
 
   .glass-button {
-    @apply glass rounded-full px-6 py-3 font-medium transition-all duration-300;
+    @apply glass rounded-full px-8 py-4 font-semibold transition-all duration-300;
     background: var(--gradient-primary);
-    border: 1px solid hsl(var(--primary-glow) / 0.4);
+    border: 2px solid hsl(var(--primary-glow) / 0.5);
     color: hsl(var(--primary-foreground));
+    box-shadow: 0 4px 20px hsl(var(--primary-glow) / 0.3);
   }
 
   .glass-button:hover {
-    box-shadow: 0 0 30px hsl(var(--primary-glow) / 0.5);
-    transform: translateY(-2px);
+    box-shadow: 0 0 40px hsl(var(--primary-glow) / 0.6);
+    transform: translateY(-3px);
+    border-color: hsl(var(--primary-glow) / 0.8);
   }
 
   .glass-nav {
-    @apply glass-heavy fixed top-4 left-1/2 transform -translate-x-1/2 z-50 rounded-full px-8 py-4;
+    @apply glass-heavy fixed top-6 left-1/2 transform -translate-x-1/2 z-50 rounded-full px-8 py-4;
+    border: 2px solid hsl(var(--glass-border));
   }
 
   .glow {
