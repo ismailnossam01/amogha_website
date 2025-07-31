@@ -184,10 +184,11 @@
   .glass-nav {
     @apply glass-heavy fixed top-6 left-1/2 transform -translate-x-1/2 z-50 rounded-full px-8 py-4;
     border: 2px solid hsl(var(--glass-border));
+    backdrop-filter: blur(30px);
   }
 
   .glow {
-    filter: drop-shadow(0 0 20px hsl(var(--primary-glow) / 0.5));
+    filter: drop-shadow(0 0 25px hsl(var(--primary-glow) / 0.6));
   }
 
   .glow-green {

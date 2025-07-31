@@ -40,7 +40,7 @@ export function Navbar() {
           <img 
             src={amoghaLogo} 
             alt="AMOGHA Logo" 
-            className="w-8 h-8 glow"
+            className="w-12 h-12 glow object-contain bg-white/10 rounded-full p-1"
           />
           {navItems.map((item) => (
             <button
@@ -76,7 +76,7 @@ export function Navbar() {
             <img 
               src={amoghaLogo} 
               alt="AMOGHA Logo" 
-              className="w-16 h-16 glow mb-8"
+              className="w-20 h-20 glow mb-8 object-contain bg-white/10 rounded-full p-2"
             />
             {navItems.map((item) => (
               <button
