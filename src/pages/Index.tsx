@@ -146,15 +146,22 @@ const Index = () => {
             
             {/* Desktop Layout - Two Columns */}
             <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start lg:mt-16">
-              {/* Left Side - Title and Countdown */}
+              {/* Left Side - Logo with Title and Countdown */}
               <div className="space-y-8">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gradient animate-fade-in leading-tight text-left">
-                  AMOGHA
-                  <br />
-                  <span className="text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                    RIPPLE 2K25
-                  </span>
-                </h1>
+                <div className="flex items-center space-x-6 justify-start">
+                  <img 
+                    src={amoghaLogo} 
+                    alt="AMOGHA Logo" 
+                    className="w-20 h-20 glow object-contain animate-float"
+                  />
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient animate-fade-in leading-tight text-left">
+                    AMOGHA
+                    <br />
+                    <span className="text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                      RIPPLE 2K25
+                    </span>
+                  </h1>
+                </div>
                 
                 <div className="flex justify-start">
                   <CountdownTimer />
@@ -207,6 +214,24 @@ const Index = () => {
 
             {/* Mobile Layout - Stacked */}
             <div className="lg:hidden space-y-8">
+              {/* Mobile Title with Logo */}
+              <div className="flex flex-col items-center space-y-6">
+                <div className="flex items-center space-x-4">
+                  <img 
+                    src={amoghaLogo} 
+                    alt="AMOGHA Logo" 
+                    className="w-16 h-16 glow object-contain animate-float"
+                  />
+                  <h1 className="text-4xl md:text-5xl font-bold text-gradient animate-fade-in leading-tight text-center">
+                    AMOGHA
+                    <br />
+                    <span className="text-3xl md:text-4xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                      RIPPLE 2K25
+                    </span>
+                  </h1>
+                </div>
+              </div>
+              
               {/* Info Card */}
               <div className="glass-card max-w-4xl mx-auto p-6">
                 <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">

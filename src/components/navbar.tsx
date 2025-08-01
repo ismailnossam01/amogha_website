@@ -32,15 +32,15 @@ export function Navbar() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className={`glass-nav flex items-center justify-between w-full max-w-7xl mx-auto px-4 transition-all duration-500 ${
+      <nav className={`glass-nav flex items-center justify-center w-full max-w-7xl mx-auto px-4 transition-all duration-500 ${
         isScrolled ? 'glass-heavy scale-95' : 'glass'
       }`}>
-        <img 
-          src={amoghaLogo} 
-          alt="AMOGHA Logo" 
-          className="w-12 h-12 glow object-contain"
-        />
         <div className="flex items-center space-x-6">
+          <img 
+            src={amoghaLogo} 
+            alt="AMOGHA Logo" 
+            className="w-12 h-12 glow object-contain"
+          />
           {navItems.map((item) => (
             <button
               key={item.label}
