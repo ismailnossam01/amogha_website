@@ -106,7 +106,7 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4 pt-32 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${posterUrl})` }} />
-        <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-md" />
         <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/70 to-background/80" />
 
         <div className="relative z-20 w-full max-w-7xl mx-auto text-center">
