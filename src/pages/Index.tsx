@@ -144,40 +144,47 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Title Section */}
-            <div className="space-y-8">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gradient animate-fade-in leading-tight">
-                AMOGHA
-                <br />
-                <span className="text-4xl md:text-6xl lg:text-7xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                  RIPPLE 2K25
-                </span>
-              </h1>
-              
-              <div className="glass-card max-w-4xl mx-auto p-8">
-                <p className="text-2xl md:text-3xl font-semibold text-foreground mb-6">
+            {/* Title */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gradient animate-fade-in leading-tight">
+              AMOGHA
+              <br />
+              <span className="text-4xl md:text-6xl lg:text-7xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                RIPPLE 2K25
+              </span>
+            </h1>
+            
+            {/* Desktop Layout - Side by Side */}
+            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 lg:items-center lg:mt-16">
+              {/* Info Card */}
+              <div className="glass-card p-8">
+                <p className="text-xl font-semibold text-foreground mb-6">
                   National Level Student Technical Symposium
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+                <div className="space-y-4 text-base">
                   <div className="flex items-center justify-center space-x-3">
-                    <Calendar className="h-6 w-6 text-primary" />
-                    <span className="font-bold text-xl text-primary">19 | 20 September 2025</span>
+                    <Calendar className="h-5 w-5 text-primary" />
+                    <span className="font-bold text-lg text-primary">19 | 20 September 2025</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3">
-                    <MapPin className="h-6 w-6 text-secondary" />
+                    <MapPin className="h-5 w-5 text-secondary" />
                     <span className="text-foreground font-medium">RGMCET</span>
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground mt-4 text-base">
+                <p className="text-muted-foreground mt-4 text-sm">
                   Departments of CSE (AI & ML) and CSE & BS<br />
                   Rajeev Gandhi Memorial College of Engineering & Technology
                 </p>
               </div>
 
+              {/* Countdown Timer */}
+              <div className="flex justify-center">
+                <CountdownTimer />
+              </div>
+
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+              <div className="flex flex-col gap-4">
                 <button 
                   onClick={() => window.open("https://forms.google.com", '_blank')}
                   className="glass-button text-lg group flex items-center justify-center space-x-3"
@@ -187,18 +194,61 @@ const Index = () => {
                 </button>
                 <button 
                   onClick={() => document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="glass-card px-10 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg border-2 border-primary/30 hover:border-primary/60"
+                  className="glass-card px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-base border-2 border-primary/30 hover:border-primary/60"
                 >
                   Explore Events
                 </button>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Countdown Timer - Fixed at Bottom */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-5xl px-4 z-20">
-          <CountdownTimer />
+            {/* Mobile Layout - Stacked */}
+            <div className="lg:hidden space-y-8">
+              {/* Info Card */}
+              <div className="glass-card max-w-4xl mx-auto p-6">
+                <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">
+                  National Level Student Technical Symposium
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base">
+                  <div className="flex items-center justify-center space-x-3">
+                    <Calendar className="h-5 w-5 text-primary" />
+                    <span className="font-bold text-lg text-primary">19 | 20 September 2025</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-3">
+                    <MapPin className="h-5 w-5 text-secondary" />
+                    <span className="text-foreground font-medium">RGMCET</span>
+                  </div>
+                </div>
+                
+                <p className="text-muted-foreground mt-4 text-sm">
+                  Departments of CSE (AI & ML) and CSE & BS<br />
+                  Rajeev Gandhi Memorial College of Engineering & Technology
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button 
+                  onClick={() => window.open("https://forms.google.com", '_blank')}
+                  className="glass-button text-lg group flex items-center justify-center space-x-3"
+                >
+                  <span>Register Now</span>
+                  <ExternalLink className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </button>
+                <button 
+                  onClick={() => document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="glass-card px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg border-2 border-primary/30 hover:border-primary/60"
+                >
+                  Explore Events
+                </button>
+              </div>
+
+              {/* Countdown Timer */}
+              <div className="flex justify-center">
+                <CountdownTimer />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
