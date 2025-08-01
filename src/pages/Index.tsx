@@ -341,6 +341,47 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-4 observe-me">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Contact Information
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Get in touch for any queries or assistance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="glass-card text-center">
+              <Phone className="h-12 w-12 mx-auto mb-4 text-primary" />
+              <h3 className="text-xl font-semibold text-foreground mb-2">Faculty Coordinator</h3>
+              <p className="text-muted-foreground">9441666995</p>
+            </div>
+            
+            <div className="glass-card text-center">
+              <Phone className="h-12 w-12 mx-auto mb-4 text-secondary" />
+              <h3 className="text-xl font-semibold text-foreground mb-2">Student Coordinator</h3>
+              <p className="text-muted-foreground">7288846210</p>
+            </div>
+            
+            <div className="glass-card text-center">
+              <Mail className="h-12 w-12 mx-auto mb-4 text-accent" />
+              <h3 className="text-xl font-semibold text-foreground mb-2">Website</h3>
+              <a 
+                href="https://amogha-ripple.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                amogha-ripple.vercel.app
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Registrations Section */}
       <section id="registrations" className="py-20 px-4 observe-me">
         <div className="max-w-6xl mx-auto">
