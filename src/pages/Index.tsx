@@ -230,46 +230,67 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="py-16 px-4 mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="glass-card">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <img src={logoUrl} alt="AMOGHA Logo" className="w-20 glow mx-auto md:mx-0" />
-                <h3 className="text-xl font-bold text-gradient">AMOGHA 2K25</h3>
-                <p className="text-muted‑foreground">National Level Student Technical Symposium empowering the next generation of tech innovators.</p>
-              </div>
+  <div className="max-w-6xl mx-auto">
+    <div className="glass-card">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          <img src={logoUrl} alt="AMOGHA Logo" className="w-20 glow mx-auto md:mx-0" />
+          <h3 className="text-xl font-bold text-gradient">AMOGHA 2K25</h3>
+          <p className="text-muted-foreground">
+            National Level Student Technical Symposium empowering the next generation of tech innovators.
+          </p>
+        </div>
 
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-foreground">Contact Information</h4>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-primary" />
-                    <div>
-                      <div className="font-medium">Faculty Coordinator</div>
-                      <div className="text-muted‑foreground">9441666995</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-secondary" />
-                    <div>
-                      <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted‑foreground">7288846210</div>
-                    </div>
-                  </div>
-                </div>
+        <div className="space-y-4">
+          <h4 className="text-lg font-semibold text-foreground">Contact Information</h4>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <Phone className="h-4 w-4 text-primary" />
+              <div>
+                <div className="font-medium">Faculty Coordinator</div>
+                <div className="text-muted-foreground">9441666995</div>
               </div>
             </div>
-
-            <div className="mt-8 pt-8 border-t border‑border text-center">
-              <p className="text-muted‑foreground">
-                © 2025 AMOGHA 2K25. All rights reserved.
-                <span className="mx-2">•</span>
-                Rajeev Gandhi Memorial College of Engineering & Technology
-              </p>
+            <div className="flex items-center space-x-3">
+              <Phone className="h-4 w-4 text-secondary" />
+              <div>
+                <div className="font-medium">Student Coordinator</div>
+                <div className="text-muted-foreground">7288846210</div>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="mt-8 pt-8 border-t border-border text-center space-y-4">
+        <p className="text-muted-foreground">
+          © 2025 AMOGHA 2K25. All rights reserved.
+          <span className="mx-2">•</span>
+          Rajeev Gandhi Memorial College of Engineering & Technology
+        </p>
+
+        {/* Designer Card */}
+        <a
+          href="https://ismailnportfolio.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-muted/40 hover:bg-muted/60 backdrop-blur-md shadow-sm transition hover:shadow-md"
+        >
+          <img
+            src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1754035126/ismail_nossam_passport_size_eaaqzl.jpg"
+            alt="Ismail Nossam"
+            className="w-8 h-8 rounded-full object-cover border border-primary"
+          />
+          <div className="text-sm font-medium text-foreground text-left">
+            <span className="block leading-tight">Website Designed By</span>
+            <span className="block font-semibold">Ismail Nossam</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
