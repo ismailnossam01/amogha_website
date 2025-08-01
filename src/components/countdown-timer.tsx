@@ -8,7 +8,12 @@ interface TimeLeft {
 }
 
 export function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
     const targetDate = new Date('2025-09-19T00:00:00').getTime();
@@ -19,8 +24,12 @@ export function CountdownTimer() {
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         setTimeLeft({ days, hours, minutes, seconds });
@@ -38,13 +47,30 @@ export function CountdownTimer() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mt-8">
+    <div className="flex flex-wrap justify-center gap-2 sm:gap-4 sm:mt-8 mt-4">
       {timeUnits.map((unit, index) => (
-        <div key={index} className="glass-card text-center min-w-[80px] animate-glow">
-          <div className="text-3xl md:text-4xl font-bold text-gradient">
+        <div
+          key={index}
+          className={`
+            flex flex-col items-center 
+            sm:glass-card sm:px-4 sm:py-3 sm:min-w-[80px] 
+            sm:animate-glow
+          `}
+        >
+          <div
+            className={`
+              text-base font-semibold text-gradient 
+              sm:text-3xl sm:font-bold
+            `}
+          >
             {unit.value.toString().padStart(2, '0')}
           </div>
-          <div className="text-sm uppercase tracking-wider text-muted-foreground">
+          <div
+            className={`
+              text-[10px] uppercase tracking-wider text-muted-foreground 
+              sm:text-xs
+            `}
+          >
             {unit.label}
           </div>
         </div>
@@ -52,3 +78,5 @@ export function CountdownTimer() {
     </div>
   );
 }
+
+export default CountdownTimer;
