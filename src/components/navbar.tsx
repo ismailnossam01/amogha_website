@@ -19,7 +19,6 @@ export function Navbar() {
     { label: 'Home', href: '#home' },
     { label: 'Events', href: '#events' },
     { label: 'Schedule', href: '#schedule' },
-    { label: 'Registrations', href: '#registrations' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -33,15 +32,15 @@ export function Navbar() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className={`glass-nav hidden md:flex items-center space-x-8 transition-all duration-500 ${
+      <nav className={`glass-nav flex items-center justify-between w-full max-w-7xl mx-auto px-4 transition-all duration-500 ${
         isScrolled ? 'glass-heavy scale-95' : 'glass'
       }`}>
+        <img 
+          src={amoghaLogo} 
+          alt="AMOGHA Logo" 
+          className="w-12 h-12 glow object-contain"
+        />
         <div className="flex items-center space-x-6">
-          <img 
-            src={amoghaLogo} 
-            alt="AMOGHA Logo" 
-            className="w-12 h-12 glow object-contain bg-white/10 rounded-full p-1"
-          />
           {navItems.map((item) => (
             <button
               key={item.label}
@@ -51,48 +50,9 @@ export function Navbar() {
               {item.label}
             </button>
           ))}
+          <ThemeToggle />
         </div>
-        <ThemeToggle />
       </nav>
-
-      {/* Mobile Navigation Button */}
-      <div className="md:hidden fixed top-6 right-6 z-50">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="glass-heavy w-14 h-14 rounded-full flex items-center justify-center border-2 border-primary/30 hover:border-primary/60 transition-all duration-300"
-        >
-          {isOpen ? (
-            <X className="h-6 w-6 text-primary font-bold" />
-          ) : (
-            <Menu className="h-6 w-6 text-primary font-bold" />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden fixed inset-0 z-40 glass-heavy">
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            <img 
-              src={amoghaLogo} 
-              alt="AMOGHA Logo" 
-              className="w-20 h-20 glow mb-8 object-contain bg-white/10 rounded-full p-2"
-            />
-            {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-3xl font-bold text-foreground hover:text-gradient transition-colors duration-300 uppercase tracking-wide"
-              >
-                {item.label}
-              </button>
-            ))}
-            <div className="mt-8">
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

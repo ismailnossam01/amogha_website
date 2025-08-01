@@ -144,15 +144,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Title */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gradient animate-fade-in leading-tight">
-              AMOGHA
-              <br />
-              <span className="text-4xl md:text-6xl lg:text-7xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                RIPPLE 2K25
-              </span>
-            </h1>
-            
             {/* Desktop Layout - Two Columns */}
             <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start lg:mt-16">
               {/* Left Side - Title and Countdown */}
