@@ -47,28 +47,28 @@ export function CountdownTimer() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-2 sm:gap-4 sm:mt-8 mt-4">
+    <div className="flex flex-wrap justify-center gap-4 mt-6 sm:mt-8">
       {timeUnits.map((unit, index) => (
         <div
           key={index}
           className={`
             flex flex-col items-center 
-            sm:glass-card sm:px-4 sm:py-3 sm:min-w-[80px] 
-            sm:animate-glow
+            px-2 py-1 
+            sm:glass-card sm:px-4 sm:py-3 sm:min-w-[80px] sm:animate-glow
           `}
         >
           <div
             className={`
-              text-base font-semibold text-gradient 
-              sm:text-3xl sm:font-bold
+              text-2xl font-bold text-gradient 
+              sm:text-4xl
             `}
           >
             {unit.value.toString().padStart(2, '0')}
           </div>
           <div
             className={`
-              text-[10px] uppercase tracking-wider text-muted-foreground 
-              sm:text-xs
+              text-xs uppercase tracking-wider text-muted-foreground 
+              sm:text-sm
             `}
           >
             {unit.label}
