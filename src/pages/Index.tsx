@@ -153,51 +153,64 @@ const Index = () => {
               </span>
             </h1>
             
-            {/* Desktop Layout - Side by Side */}
-            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 lg:items-center lg:mt-16">
-              {/* Info Card */}
-              <div className="glass-card p-8">
-                <p className="text-xl font-semibold text-foreground mb-6">
-                  National Level Student Technical Symposium
-                </p>
+            {/* Desktop Layout - Two Columns */}
+            <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start lg:mt-16">
+              {/* Left Side - Title and Countdown */}
+              <div className="space-y-8">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gradient animate-fade-in leading-tight text-left">
+                  AMOGHA
+                  <br />
+                  <span className="text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                    RIPPLE 2K25
+                  </span>
+                </h1>
                 
-                <div className="space-y-4 text-base">
-                  <div className="flex items-center justify-center space-x-3">
-                    <Calendar className="h-5 w-5 text-primary" />
-                    <span className="font-bold text-lg text-primary">19 | 20 September 2025</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-3">
-                    <MapPin className="h-5 w-5 text-secondary" />
-                    <span className="text-foreground font-medium">RGMCET</span>
-                  </div>
+                <div className="flex justify-start">
+                  <CountdownTimer />
                 </div>
-                
-                <p className="text-muted-foreground mt-4 text-sm">
-                  Departments of CSE (AI & ML) and CSE & BS<br />
-                  Rajeev Gandhi Memorial College of Engineering & Technology
-                </p>
               </div>
 
-              {/* Countdown Timer */}
-              <div className="flex justify-center">
-                <CountdownTimer />
-              </div>
+              {/* Right Side - Info Card and Buttons */}
+              <div className="space-y-6">
+                {/* Info Card */}
+                <div className="glass-card p-8">
+                  <p className="text-xl font-semibold text-foreground mb-6">
+                    National Level Student Technical Symposium
+                  </p>
+                  
+                  <div className="space-y-4 text-base">
+                    <div className="flex items-center justify-center space-x-3">
+                      <Calendar className="h-5 w-5 text-primary" />
+                      <span className="font-bold text-lg text-primary">19 | 20 September 2025</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-3">
+                      <MapPin className="h-5 w-5 text-secondary" />
+                      <span className="text-foreground font-medium">RGMCET</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-muted-foreground mt-4 text-sm">
+                    Departments of CSE (AI & ML) and CSE & BS<br />
+                    Rajeev Gandhi Memorial College of Engineering & Technology
+                  </p>
+                </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col gap-4">
-                <button 
-                  onClick={() => window.open("https://forms.google.com", '_blank')}
-                  className="glass-button text-lg group flex items-center justify-center space-x-3"
-                >
-                  <span>Register Now</span>
-                  <ExternalLink className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </button>
-                <button 
-                  onClick={() => document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="glass-card px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-base border-2 border-primary/30 hover:border-primary/60"
-                >
-                  Explore Events
-                </button>
+                {/* CTA Buttons */}
+                <div className="flex flex-col gap-4">
+                  <button 
+                    onClick={() => window.open("https://forms.google.com", '_blank')}
+                    className="glass-button text-lg group flex items-center justify-center space-x-3"
+                  >
+                    <span>Register Now</span>
+                    <ExternalLink className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
+                  <button 
+                    onClick={() => document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="glass-card px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-base border-2 border-primary/30 hover:border-primary/60"
+                  >
+                    Explore Events
+                  </button>
+                </div>
               </div>
             </div>
 
