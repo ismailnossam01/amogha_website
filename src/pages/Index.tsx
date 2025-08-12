@@ -285,58 +285,79 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="py-16 px-4 mt-20" id="contact">
-        <div className="max-w-6xl mx-auto">
-          <div className="glass-card">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <img
-                  src={logoUrl}
-                  alt="AMOGHA Logo"
-                  className="w-20 glow mx-auto md:mx-0"
-                />
-                <h3 className="text-xl font-bold text-gradient">AMOGHA 2K25</h3>
-                <p className="text-muted-foreground">
-                  National Level Student Technical Symposium empowering the next
-                  generation of tech innovators.
-                </p>
-              </div>
+  <div className="max-w-6xl mx-auto">
+    <div className="glass-card">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left Side */}
+        <div className="space-y-4">
+          <img
+            src={logoUrl}
+            alt="AMOGHA Logo"
+            className="w-20 glow mx-auto md:mx-0"
+          />
+          <h3 className="text-xl font-bold text-gradient">AMOGHA 2K25</h3>
+          <p className="text-muted-foreground">
+            National Level Student Technical Symposium empowering the next
+            generation of tech innovators.
+          </p>
+        </div>
 
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-foreground">
-                  Contact Information
-                </h4>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-primary" />
-                    <div>
-                      <div className="font-medium">Faculty Coordinator</div>
-                      <div className="text-muted-foreground">9441666995(Hara Gopal V.P)</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-primary" />
-                    <div>
-                      <div className="font-medium">Faculty Coordinator</div>
-                      <div className="text-muted-foreground">9441666995(Arun Babu)</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-secondary" />
-                    <div>
-                      <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted-foreground">7288846210(Ismail N)</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-secondary" />
-                    <div>
-                      <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted-foreground">9652162995(Subahan S)</div>
-                    </div>
-                  </div>
-                </div>
+        {/* Right Side - Contact */}
+        <div className="space-y-4">
+          <h4 className="text-lg font-semibold text-foreground">
+            Contact Information
+          </h4>
+
+          {/* Numbers in 2 columns on desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-center space-x-3">
+              <Phone className="h-4 w-4 text-primary" />
+              <div>
+                <div className="font-medium">Faculty Coordinator</div>
+                <div className="text-muted-foreground">9441666995 (Hara Gopal V.P)</div>
               </div>
             </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="h-4 w-4 text-primary" />
+              <div>
+                <div className="font-medium">Faculty Coordinator</div>
+                <div className="text-muted-foreground">9441666995 (Arun Babu)</div>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="h-4 w-4 text-secondary" />
+              <div>
+                <div className="font-medium">Student Coordinator</div>
+                <div className="text-muted-foreground">7288846210 (Ismail N)</div>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="h-4 w-4 text-secondary" />
+              <div>
+                <div className="font-medium">Student Coordinator</div>
+                <div className="text-muted-foreground">9652162995 (Subahan S)</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Email */}
+          <div className="flex items-center space-x-3 mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 fill="none" viewBox="0 0 24 24" 
+                 strokeWidth={1.5} stroke="currentColor" 
+                 className="w-4 h-4 text-primary">
+              <path strokeLinecap="round" strokeLinejoin="round" 
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 
+                   2.25 0 01-2.25-2.25V6.75m0 0l9 6 9-6m-18 0L12 
+                   12.75 21.75 6.75" />
+            </svg>
+            <div>
+              <div className="font-medium">Email</div>
+              <div className="text-muted-foreground">amogha@rgmcet.edu.in</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
             {/* Bottom Section */}
             <div className="mt-8 pt-8 border-t border-border text-center space-y-4">
