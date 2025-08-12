@@ -303,16 +303,7 @@ const Index = () => {
         <h3 className="text-xl font-bold text-gradient mb-3">{title}</h3>
         <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
         
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center space-x-2">
-            <Users className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium">{registrations} registered</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Trophy className="h-4 w-4 text-secondary" />
-            <span className="text-sm font-medium">Prizes</span>
-          </div>
-        </div>
+        
         
         <div className="space-y-3">
           <button
