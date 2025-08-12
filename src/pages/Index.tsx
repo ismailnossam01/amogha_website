@@ -32,7 +32,7 @@ const Index = () => {
         'Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.',
       image: codeAThonImg,
       registrations: registrationStats.codeAThon,
-      formLink: 'https://forms.gle/a63mshJLcb2s157V6'
+      registrationLink: 'https://forms.gle/a63mshJLcb2s157V6'
     },
     {
       title: 'Web-a-thon',
@@ -40,7 +40,7 @@ const Index = () => {
         'Creative web development competition focusing on innovative UI/UX design and modern frameworks.',
       image: webAThonImg,
       registrations: registrationStats.webAThon,
-      formLink: 'https://forms.gle/TJroj81ZuwHfR2m3A'
+      registrationLink: 'https://forms.gle/TJroj81ZuwHfR2m3A'
     },
     {
       title: 'Paper Symposium',
@@ -48,7 +48,7 @@ const Index = () => {
         'Academic research presentation platform for emerging technologies and technical innovations.',
       image: paperSymposiumImg,
       registrations: registrationStats.paperSymposium,
-      formLink: 'https://forms.gle/bJoNxF7bZMW1uBJZ8'
+      registrationLink: 'https://forms.gle/bJoNxF7bZMW1uBJZ8'
     },
     {
       title: 'Technical Quiz',
@@ -56,7 +56,7 @@ const Index = () => {
         'Interactive knowledge competition testing expertise in computer science and technology domains.',
       image: technicalQuizImg,
       registrations: registrationStats.technicalQuiz,
-      formLink: 'https://forms.gle/1XcwZYvrScSZLfuP6'
+      registrationLink: 'https://forms.gle/1XcwZYvrScSZLfuP6'
     },
     {
       title: 'Workshop',
@@ -64,7 +64,7 @@ const Index = () => {
         'Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.',
       image: workshopImg,
       registrations: registrationStats.workshop,
-      formLink: 'https://forms.gle/3yAGmbLzhqxi3nyu8'
+      registrationLink: 'https://forms.gle/3yAGmbLzhqxi3nyu8'
     }
   ];
 
