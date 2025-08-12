@@ -22,85 +22,94 @@ const Index = () => {
   });
 
   const posterUrl = amoghaPoster;
-  const logoUrl = 'https://res.cloudinary.com/dirtmiqzt/image/upload/v1754023294/IMG_20250801_101013_ypqkdz.png';
+  const logoUrl =
+    'https://res.cloudinary.com/dirtmiqzt/image/upload/v1754023294/IMG_20250801_101013_ypqkdz.png';
 
   const events = [
     {
-      title: "Code-a-thon",
-      description: "Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.",
+      title: 'Code-a-thon',
+      description:
+        'Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.',
       image: codeAThonImg,
       registrations: registrationStats.codeAThon,
-      formLink: "https://forms.gle/codeathonFormLink" // Replace with actual Google Form link
+      formLink: 'https://forms.gle/a63mshJLcb2s157V6'
     },
     {
-      title: "Web-a-thon",
-      description: "Creative web development competition focusing on innovative UI/UX design and modern frameworks.",
+      title: 'Web-a-thon',
+      description:
+        'Creative web development competition focusing on innovative UI/UX design and modern frameworks.',
       image: webAThonImg,
       registrations: registrationStats.webAThon,
-      formLink: "https://forms.gle/webathonFormLink"
+      formLink: 'https://forms.gle/TJroj81ZuwHfR2m3A'
     },
     {
-      title: "Paper Symposium",
-      description: "Academic research presentation platform for emerging technologies and technical innovations.",
+      title: 'Paper Symposium',
+      description:
+        'Academic research presentation platform for emerging technologies and technical innovations.',
       image: paperSymposiumImg,
       registrations: registrationStats.paperSymposium,
-      formLink: "https://forms.gle/bJoNxF7bZMW1uBJZ8"
+      formLink: 'https://forms.gle/bJoNxF7bZMW1uBJZ8'
     },
     {
-      title: "Technical Quiz",
-      description: "Interactive knowledge competition testing expertise in computer science and technology domains.",
+      title: 'Technical Quiz',
+      description:
+        'Interactive knowledge competition testing expertise in computer science and technology domains.',
       image: technicalQuizImg,
       registrations: registrationStats.technicalQuiz,
-      formLink: "https://forms.gle/technicalQuizFormLink"
+      formLink: 'https://forms.gle/1XcwZYvrScSZLfuP6'
     },
     {
-      title: "Workshop",
-      description: "Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.",
+      title: 'Workshop',
+      description:
+        'Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.',
       image: workshopImg,
       registrations: registrationStats.workshop,
-      formLink: "https://forms.gle/workshopFormLink"
+      formLink: 'https://forms.gle/3yAGmbLzhqxi3nyu8'
     }
   ];
 
   const scheduleData = [
     {
-      day: "Day 1 - September 19, 2025",
+      day: 'Day 1 - September 19, 2025',
       events: [
-        { time: "09:00 AM", event: "Registration & Welcome", location: "Main Auditorium" },
-        { time: "10:00 AM", event: "Opening Ceremony", location: "Main Auditorium" },
-        { time: "11:00 AM", event: "Code-a-thon Begins", location: "Computer Lab 1" },
-        { time: "11:00 AM", event: "Paper Symposium - Session 1", location: "Seminar Hall A" },
-        { time: "02:00 PM", event: "Web-a-thon Kickoff", location: "Computer Lab 2" },
-        { time: "03:30 PM", event: "Technical Workshop", location: "Conference Room" },
-        { time: "05:00 PM", event: "Day 1 Wrap-up", location: "Main Auditorium" }
+        { time: '09:00 AM', event: 'Registration & Welcome', location: 'Main Auditorium' },
+        { time: '10:00 AM', event: 'Opening Ceremony', location: 'Main Auditorium' },
+        { time: '11:00 AM', event: 'Code-a-thon Begins', location: 'Computer Lab 1' },
+        { time: '11:00 AM', event: 'Paper Symposium - Session 1', location: 'Seminar Hall A' },
+        { time: '02:00 PM', event: 'Web-a-thon Kickoff', location: 'Computer Lab 2' },
+        { time: '03:30 PM', event: 'Technical Workshop', location: 'Conference Room' },
+        { time: '05:00 PM', event: 'Day 1 Wrap-up', location: 'Main Auditorium' }
       ]
     },
     {
-      day: "Day 2 - September 20, 2025",
+      day: 'Day 2 - September 20, 2025',
       events: [
-        { time: "09:00 AM", event: "Technical Quiz", location: "Main Auditorium" },
-        { time: "11:00 AM", event: "Paper Symposium - Session 2", location: "Seminar Hall A" },
-        { time: "01:00 PM", event: "Final Presentations", location: "Main Auditorium" },
-        { time: "03:00 PM", event: "Judging & Evaluation", location: "Conference Room" },
-        { time: "04:30 PM", event: "Award Ceremony", location: "Main Auditorium" },
-        { time: "05:30 PM", event: "Closing Ceremony", location: "Main Auditorium" }
+        { time: '09:00 AM', event: 'Technical Quiz', location: 'Main Auditorium' },
+        { time: '11:00 AM', event: 'Paper Symposium - Session 2', location: 'Seminar Hall A' },
+        { time: '01:00 PM', event: 'Final Presentations', location: 'Main Auditorium' },
+        { time: '03:00 PM', event: 'Judging & Evaluation', location: 'Conference Room' },
+        { time: '04:30 PM', event: 'Award Ceremony', location: 'Main Auditorium' },
+        { time: '05:30 PM', event: 'Closing Ceremony', location: 'Main Auditorium' }
       ]
     }
   ];
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-slide-in');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-slide-in');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
 
-    document.querySelectorAll('.observe-me').forEach((section) => observer.observe(section));
+    document.querySelectorAll('.observe-me').forEach(section => observer.observe(section));
 
     return () => {
-      document.querySelectorAll('.observe-me').forEach((section) => observer.unobserve(section));
+      document.querySelectorAll('.observe-me').forEach(section => observer.unobserve(section));
     };
   }, []);
 
@@ -109,8 +118,14 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 pt-32 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${posterUrl})` }} />
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center px-4 pt-32 overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${posterUrl})` }}
+        />
         <div className="absolute inset-0 bg-background/60 backdrop-blur-md" />
         <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/70 to-background/80" />
 
@@ -130,7 +145,9 @@ const Index = () => {
             <CountdownTimer />
 
             <button
-              onClick={() => document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })
+              }
               className="glass-button px-10 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg border-2 border-primary/30 hover:border-primary/60"
             >
               Explore Events
@@ -150,7 +167,9 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base justify-center">
               <div className="flex items-center justify-center space-x-3">
                 <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-bold text-lg text-primary">19 | 20 September 2025</span>
+                <span className="font-bold text-lg text-primary">
+                  19 | 20 September 2025
+                </span>
               </div>
               <div className="flex items-center justify-center space-x-3">
                 <MapPin className="h-5 w-5 text-secondary" />
@@ -158,15 +177,19 @@ const Index = () => {
               </div>
             </div>
             <p className="text-muted-foreground mt-4 text-sm">
-              Departments of CSE (AI & ML) and CSE & BS<br />
+              Departments of CSE (AI & ML) and CSE & BS
+              <br />
               Rajeev Gandhi Memorial College of Engineering & Technology
             </p>
           </div>
 
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">Featured Events</h2>
+            <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
+              Featured Events
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Explore our diverse range of technical competitions and learning opportunities designed to showcase innovation and excellence
+              Explore our diverse range of technical competitions and learning opportunities
+              designed to showcase innovation and excellence
             </p>
           </div>
 
@@ -190,16 +213,25 @@ const Index = () => {
       <section id="schedule" className="py-20 px-4 observe-me">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">Event Schedule</h2>
-            <p className="text-xl text-muted-foreground">Complete timeline of all symposium activities</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Event Schedule
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Complete timeline of all symposium activities
+            </p>
           </div>
           <div className="space-y-12">
             {scheduleData.map((day, dayIndex) => (
               <div key={dayIndex} className="glass-card">
                 <h3 className="text-2xl font-bold text-gradient mb-8">{day.day}</h3>
                 {day.events.map((evt, evtIndex) => (
-                  <div key={evtIndex} className="flex flex-col md:flex-row md:items-center gap-4 p-4 rounded-lg glass hover:glass-heavy transition-all duration-300">
-                    <div className="font-semibold text-primary min-w-[100px]">{evt.time}</div>
+                  <div
+                    key={evtIndex}
+                    className="flex flex-col md:flex-row md:items-center gap-4 p-4 rounded-lg glass hover:glass-heavy transition-all duration-300"
+                  >
+                    <div className="font-semibold text-primary min-w-[100px]">
+                      {evt.time}
+                    </div>
                     <div className="flex-1">
                       <div className="font-medium text-foreground">{evt.event}</div>
                       <div className="text-sm text-muted-foreground flex items-center space-x-1">
@@ -219,19 +251,31 @@ const Index = () => {
       <section id="registrations" className="py-20 px-4 observe-me">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">Registration Statistics</h2>
-            <p className="text-xl text-muted-foreground">Join thousands of students in this technical excellence journey</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Registration Statistics
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Join thousands of students in this technical excellence journey
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <div className="glass-card text-center animate-glow">
               <Users className="h-8 w-8 mx-auto mb-4 text-primary" />
-              <div className="text-3xl font-bold text-gradient">{registrationStats.total}</div>
+              <div className="text-3xl font-bold text-gradient">
+                {registrationStats.total}
+              </div>
               <div className="text-sm text-muted-foreground">Total Registrations</div>
             </div>
             {events.map((event, index) => (
-              <div key={index} className="glass-card text-center" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div
+                key={index}
+                className="glass-card text-center"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <Trophy className="h-8 w-8 mx-auto mb-4 text-secondary" />
-                <div className="text-3xl font-bold text-gradient">{event.registrations}</div>
+                <div className="text-3xl font-bold text-gradient">
+                  {event.registrations}
+                </div>
                 <div className="text-sm text-muted-foreground">{event.title}</div>
               </div>
             ))}
@@ -245,15 +289,22 @@ const Index = () => {
           <div className="glass-card">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <img src={logoUrl} alt="AMOGHA Logo" className="w-20 glow mx-auto md:mx-0" />
+                <img
+                  src={logoUrl}
+                  alt="AMOGHA Logo"
+                  className="w-20 glow mx-auto md:mx-0"
+                />
                 <h3 className="text-xl font-bold text-gradient">AMOGHA 2K25</h3>
                 <p className="text-muted-foreground">
-                  National Level Student Technical Symposium empowering the next generation of tech innovators.
+                  National Level Student Technical Symposium empowering the next
+                  generation of tech innovators.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-foreground">Contact Information</h4>
+                <h4 className="text-lg font-semibold text-foreground">
+                  Contact Information
+                </h4>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <Phone className="h-4 w-4 text-primary" />
