@@ -13,12 +13,12 @@ import workshopImg from '@/assets/workshop.jpg';
 
 const Index = () => {
   const [registrationStats] = useState({
-    total: 1247,
-    codeAThon: 234,
-    webAThon: 189,
-    paperSymposium: 156,
-    technicalQuiz: 298,
-    workshop: 370
+    total: 0,
+    codeAThon: 0,
+    webAThon: 0,
+    paperSymposium: 0,
+    technicalQuiz: 0,
+    workshop: 0
   });
 
   const posterUrl = amoghaPoster;
@@ -310,14 +310,28 @@ const Index = () => {
                     <Phone className="h-4 w-4 text-primary" />
                     <div>
                       <div className="font-medium">Faculty Coordinator</div>
-                      <div className="text-muted-foreground">9441666995</div>
+                      <div className="text-muted-foreground">9441666995(Hara Gopal V.P)</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="h-4 w-4 text-primary" />
+                    <div>
+                      <div className="font-medium">Faculty Coordinator</div>
+                      <div className="text-muted-foreground">9441666995(Arun Babu)</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-4 w-4 text-secondary" />
                     <div>
                       <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted-foreground">7288846210</div>
+                      <div className="text-muted-foreground">7288846210(Ismail N)</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="h-4 w-4 text-secondary" />
+                    <div>
+                      <div className="font-medium">Student Coordinator</div>
+                      <div className="text-muted-foreground">9652162995(Subahan S)</div>
                     </div>
                   </div>
                 </div>
