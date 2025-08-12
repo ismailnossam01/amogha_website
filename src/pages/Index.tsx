@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Navbar } from '@/components/navbar';
 import { CountdownTimer } from '@/components/countdown-timer';
 import { EventCard } from '@/components/event-card';
-import { Calendar, Users, Trophy, MapPin, Phone, X } from 'lucide-react';
+import { Calendar, Users, Trophy, MapPin, Phone } from 'lucide-react';
 
 import amoghaPoster from '@/assets/amogha-poster.png';
 import codeAThonImg from '@/assets/code-a-thon.jpg';
@@ -21,9 +21,6 @@ const Index = () => {
     workshop: 0
   });
 
-  const [selectedEvent, setSelectedEvent] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const posterUrl = amoghaPoster;
   const logoUrl =
     'https://res.cloudinary.com/dirtmiqzt/image/upload/v1754023294/IMG_20250801_101013_ypqkdz.png';
@@ -35,13 +32,7 @@ const Index = () => {
         'Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.',
       image: codeAThonImg,
       registrations: registrationStats.codeAThon,
-      registrationLink: 'https://forms.gle/a63mshJLcb2s157V6',
-      instructions: [
-        'Individual or team of up to 3 members.',
-        'Duration: 3 hours.',
-        'No plagiarism allowed.',
-        'Internet access restricted during event.'
-      ]
+      registrationLink: 'https://forms.gle/a63mshJLcb2s157V6'
     },
     {
       title: 'Web-a-thon',
@@ -49,13 +40,7 @@ const Index = () => {
         'Creative web development competition focusing on innovative UI/UX design and modern frameworks.',
       image: webAThonImg,
       registrations: registrationStats.webAThon,
-      registrationLink: 'https://forms.gle/TJroj81ZuwHfR2m3A',
-      instructions: [
-        'Team size: 2–4 members.',
-        'Duration: 6 hours.',
-        'Frontend & Backend both allowed.',
-        'Theme revealed at event start.'
-      ]
+      registrationLink: 'https://forms.gle/TJroj81ZuwHfR2m3A'
     },
     {
       title: 'Paper Symposium',
@@ -63,30 +48,7 @@ const Index = () => {
         'Academic research presentation platform for emerging technologies and technical innovations.',
       image: paperSymposiumImg,
       registrations: registrationStats.paperSymposium,
-      registrationLink: 'https://forms.gle/bJoNxF7bZMW1uBJZ8',
-      instructions: [
-        'Team size: max 2 members.',
-        'Presentation time: 8 minutes + 2 minutes Q&A.',
-        'Papers should follow IEEE format.',
-        'Bring soft & hard copy.'
-      ],
-      domains: [
-        'Artificial Intelligence',
-        'Machine Learning',
-        'Deep Learning',
-        'Cybersecurity',
-        'Blockchain',
-        'Cloud Computing',
-        'Internet of Things (IoT)',
-        'Quantum Computing',
-        '5G & Wireless Communication',
-        'Augmented Reality (AR) & Virtual Reality (VR)',
-        'Natural Language Processing (NLP)',
-        'Data Science & Big Data Analytics',
-        'Computer Vision',
-        'Edge Computing',
-        'Human-Computer Interaction'
-      ]
+      registrationLink: 'https://forms.gle/bJoNxF7bZMW1uBJZ8'
     },
     {
       title: 'Technical Quiz',
@@ -94,12 +56,7 @@ const Index = () => {
         'Interactive knowledge competition testing expertise in computer science and technology domains.',
       image: technicalQuizImg,
       registrations: registrationStats.technicalQuiz,
-      registrationLink: 'https://forms.gle/1XcwZYvrScSZLfuP6',
-      instructions: [
-        'Team size: 2 members.',
-        'Multiple-choice questions.',
-        '3 rounds: Preliminary, Technical, Rapid Fire.'
-      ]
+      registrationLink: 'https://forms.gle/1XcwZYvrScSZLfuP6'
     },
     {
       title: 'Workshop',
@@ -107,12 +64,7 @@ const Index = () => {
         'Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.',
       image: workshopImg,
       registrations: registrationStats.workshop,
-      registrationLink: 'https://forms.gle/3yAGmbLzhqxi3nyu8',
-      instructions: [
-        'Individual participation.',
-        'Bring your own laptop.',
-        'Certificate of participation will be given.'
-      ]
+      registrationLink: 'https://forms.gle/3yAGmbLzhqxi3nyu8'
     }
   ];
 
@@ -161,17 +113,101 @@ const Index = () => {
     };
   }, []);
 
-  const openModal = (event) => {
-    setSelectedEvent(event);
-    setIsModalOpen(true);
-  };
-
   return (
     <div className="min-h-screen hero-bg">
       <Navbar />
 
       {/* Hero Section */}
-      {/* (Hero code same as before) */}
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center px-4 pt-32 overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${posterUrl})` }}
+        />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-md" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/70 to-background/80" />
+
+        <div className="relative z-20 w-full max-w-7xl mx-auto text-center">
+          <div className="flex flex-col items-center justify-center space-y-8">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gradient leading-tight">
+                AMOGHA 2K25
+              </h1>
+              <img
+                src={logoUrl}
+                alt="AMOGHA Logo"
+                className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain glow animate-float"
+              />
+            </div>
+
+            <CountdownTimer />
+
+            <button
+              onClick={() =>
+                document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className="glass-button px-10 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg border-2 border-primary/30 hover:border-primary/60"
+            >
+              Explore Events
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section id="events" className="py-24 px-4 observe-me bg-background/50">
+        <div className="max-w-7xl mx-auto">
+          {/* Info Card */}
+          <div className="glass-card max-w-4xl mx-auto mb-20 p-6 text-center">
+            <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">
+              National Level Student Technical Symposium
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base justify-center">
+              <div className="flex items-center justify-center space-x-3">
+                <Calendar className="h-5 w-5 text-primary" />
+                <span className="font-bold text-lg text-primary">
+                  19 | 20 September 2025
+                </span>
+              </div>
+              <div className="flex items-center justify-center space-x-3">
+                <MapPin className="h-5 w-5 text-secondary" />
+                <span className="text-foreground font-medium">RGMCET</span>
+              </div>
+            </div>
+            <p className="text-muted-foreground mt-4 text-sm">
+              Departments of CSE (AI & ML) and CSE & BS
+              <br />
+              Rajeev Gandhi Memorial College of Engineering & Technology
+            </p>
+          </div>
+
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
+              Featured Events
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Explore our diverse range of technical competitions and learning opportunities
+              designed to showcase innovation and excellence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {events.map((event, index) => (
+              <a
+                key={index}
+                href={event.formLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <EventCard {...event} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Events Section */}
       <section id="events" className="py-24 px-4 observe-me bg-background/50">
