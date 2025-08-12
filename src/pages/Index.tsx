@@ -197,7 +197,7 @@ const Index = () => {
             {events.map((event, index) => (
               <a
                 key={index}
-                href={event.formLink}
+                href={events.formLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ animationDelay: `${index * 0.2}s` }}
