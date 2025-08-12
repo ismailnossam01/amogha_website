@@ -44,7 +44,7 @@ const Index = () => {
       description: "Academic research presentation platform for emerging technologies and technical innovations.",
       image: paperSymposiumImg,
       registrations: registrationStats.paperSymposium,
-      formLink: "https://forms.gle/paperSymposiumFormLink"
+      formLink: "https://forms.gle/bJoNxF7bZMW1uBJZ8"
     },
     {
       title: "Technical Quiz",
