@@ -172,6 +172,143 @@ const eventDetails = {
   }
 };
 
+// Navbar Component
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { href: '#home', label: 'Home' },
+    { href: '#events', label: 'Events' },
+    { href: '#schedule', label: 'Schedule' },
+    { href: '#contact', label: 'Contact' }
+  ];
+
+  return (
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-background/80 border-b border-border' : 'bg-transparent'}`}>
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center space-x-3">
+            <img
+              src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1754023294/IMG_20250801_101013_ypqkdz.png"
+              alt="AMOGHA Logo"
+              className="w-10 h-10 glow"
+            />
+            <span className="text-xl font-bold text-gradient">AMOGHA 2K25</span>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <div className="space-y-1">
+              <div className={`w-6 h-0.5 bg-foreground transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <div className={`w-6 h-0.5 bg-foreground transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
+              <div className={`w-6 h-0.5 bg-foreground transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </div>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 backdrop-blur-md bg-background/90 border-t border-border">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="block py-2 text-foreground hover:text-primary transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+// Countdown Timer Component
+const CountdownTimer = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const targetDate = new Date('2025-09-19T09:00:00').getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="glass-card max-w-2xl mx-auto p-6">
+      <h3 className="text-2xl font-bold text-center text-gradient mb-6">
+        Event Countdown
+      </h3>
+      <div className="grid grid-cols-4 gap-4 text-center">
+        {Object.entries(timeLeft).map(([unit, value]) => (
+          <div key={unit} className="glass p-4 rounded-xl">
+            <div className="text-3xl md:text-4xl font-bold text-gradient">
+              {value.toString().padStart(2, '0')}
+            </div>
+            <div className="text-sm text-muted-foreground capitalize mt-1">
+              {unit}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Index = () => {
   const [registrationStats] = useState({
     total: 0,
@@ -185,48 +322,47 @@ const Index = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const posterUrl = amoghaPoster;
-  const logoUrl =
-    'https://res.cloudinary.com/dirtmiqzt/image/upload/v1754023294/IMG_20250801_101013_ypqkdz.png';
+  const posterUrl = 'https://res.cloudinary.com/dirtmiqzt/image/upload/v1754035126/amogha-poster_eaaqzl.jpg';
+  const logoUrl = 'https://res.cloudinary.com/dirtmiqzt/image/upload/v1754023294/IMG_20250801_101013_ypqkdz.png';
+
+  // Partner logos
+  const collegeLogoUrl = 'https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/logo_tdooap.jpg';
+  const ieeeLogoUrl = 'https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/IEEE_CIS_RGMCET_a6sldg.png';
+  const iicLogoUrl = 'https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077005/IEEE_CIS_RGMCET_1_vnmcsq.png';
 
   const events = [
     {
       title: 'Code-a-thon',
-      description:
-        'Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.',
-      image: codeAThonImg,
+      description: 'Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500',
       registrations: registrationStats.codeAThon,
       registrationLink: 'https://forms.gle/a63mshJLcb2s157V6'
     },
     {
       title: 'Web-a-thon',
-      description:
-        'Creative web development competition focusing on innovative UI/UX design and modern frameworks.',
-      image: webAThonImg,
+      description: 'Creative web development competition focusing on innovative UI/UX design and modern frameworks.',
+      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500',
       registrations: registrationStats.webAThon,
       registrationLink: 'https://forms.gle/TJroj81ZuwHfR2m3A'
     },
     {
       title: 'Paper Symposium',
-      description:
-        'Academic research presentation platform for emerging technologies and technical innovations.',
-      image: paperSymposiumImg,
+      description: 'Academic research presentation platform for emerging technologies and technical innovations.',
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500',
       registrations: registrationStats.paperSymposium,
       registrationLink: 'https://forms.gle/bJoNxF7bZMW1uBJZ8'
     },
     {
       title: 'Technical Quiz',
-      description:
-        'Interactive knowledge competition testing expertise in computer science and technology domains.',
-      image: technicalQuizImg,
+      description: 'Interactive knowledge competition testing expertise in computer science and technology domains.',
+      image: 'https://images.unsplash.com/photo-1606146485852-71e5dcb19c37?w=500',
       registrations: registrationStats.technicalQuiz,
       registrationLink: 'https://forms.gle/1XcwZYvrScSZLfuP6'
     },
     {
       title: 'Workshop',
-      description:
-        'Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.',
-      image: workshopImg,
+      description: 'Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500',
       registrations: registrationStats.workshop,
       registrationLink: 'https://forms.gle/3yAGmbLzhqxi3nyu8'
     }
@@ -302,8 +438,6 @@ const Index = () => {
       <div className="p-6">
         <h3 className="text-xl font-bold text-gradient mb-3">{title}</h3>
         <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
-        
-        
         
         <div className="space-y-3">
           <button
@@ -451,7 +585,64 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen hero-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <style jsx>{`
+        .glass-card {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 16px;
+          padding: 24px;
+        }
+        .glass {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          padding: 16px;
+        }
+        .glass-heavy {
+          background: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .glass-button {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-gradient {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .glow {
+          filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-slide-in {
+          animation: slideIn 0.8s ease-out forwards;
+        }
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-glow {
+          animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+          from { filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.3)); }
+          to { filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8)); }
+        }
+      `}</style>
+
       <Navbar />
 
       {/* Hero Section */}
@@ -460,11 +651,10 @@ const Index = () => {
         className="relative min-h-screen flex items-center justify-center px-4 pt-32 overflow-hidden"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{ backgroundImage: `url(${posterUrl})` }}
         />
-        <div className="absolute inset-0 bg-background/60 backdrop-blur-md" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/70 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/80 to-slate-900/80" />
 
         <div className="relative z-20 w-full max-w-7xl mx-auto text-center">
           <div className="flex flex-col items-center justify-center space-y-8">
@@ -485,7 +675,7 @@ const Index = () => {
               onClick={() =>
                 document.querySelector('#events')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="glass-button px-10 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg border-2 border-primary/30 hover:border-primary/60"
+              className="glass-button px-10 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg border-2 border-purple-400/30 hover:border-purple-400/60 text-white"
             >
               Explore Events
             </button>
@@ -494,37 +684,59 @@ const Index = () => {
       </section>
 
       {/* Events Section */}
-      <section id="events" className="py-24 px-4 observe-me bg-background/50">
+      <section id="events" className="py-24 px-4 observe-me">
         <div className="max-w-7xl mx-auto">
-          {/* Info Card */}
-          <div className="glass-card max-w-4xl mx-auto mb-20 p-6 text-center">
-            <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">
+          {/* Info Card with Partner Logos */}
+          <div className="glass-card max-w-4xl mx-auto mb-20 text-center">
+            <p className="text-xl md:text-2xl font-semibold text-white mb-6">
               National Level Student Technical Symposium
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base justify-center mb-6">
               <div className="flex items-center justify-center space-x-3">
-                <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-bold text-lg text-primary">
+                <Calendar className="h-5 w-5 text-purple-400" />
+                <span className="font-bold text-lg text-purple-400">
                   19 | 20 September 2025
                 </span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="h-5 w-5 text-secondary" />
-                <span className="text-foreground font-medium">RGMCET</span>
+                <MapPin className="h-5 w-5 text-blue-400" />
+                <span className="text-white font-medium">RGMCET</span>
               </div>
             </div>
-            <p className="text-muted-foreground mt-4 text-sm">
+            <p className="text-gray-300 mb-6 text-sm">
               Departments of CSE (AI & ML) and CSE & BS
               <br />
               Rajeev Gandhi Memorial College of Engineering & Technology
             </p>
+            
+            {/* Partner Logos */}
+            <div className="flex flex-wrap items-center justify-center gap-6 pt-6 border-t border-white/20">
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-gray-400 font-medium">In association with:</span>
+              </div>
+              <img
+                src={collegeLogoUrl}
+                alt="RGMCET Logo"
+                className="h-12 w-auto object-contain rounded-lg bg-white/10 p-2 backdrop-blur-sm"
+              />
+              <img
+                src={ieeeLogoUrl}
+                alt="IEEE RGMCET Logo"
+                className="h-12 w-auto object-contain rounded-lg bg-white/10 p-2 backdrop-blur-sm"
+              />
+              <img
+                src={iicLogoUrl}
+                alt="IIC Logo"
+                className="h-12 w-auto object-contain rounded-lg bg-white/10 p-2 backdrop-blur-sm"
+              />
+            </div>
           </div>
 
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
               Featured Events
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Explore our diverse range of technical competitions and learning opportunities
               designed to showcase innovation and excellence
             </p>
@@ -550,7 +762,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
               Event Schedule
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-gray-300">
               Complete timeline of all symposium activities
             </p>
           </div>
@@ -561,14 +773,14 @@ const Index = () => {
                 {day.events.map((evt, evtIndex) => (
                   <div
                     key={evtIndex}
-                    className="flex flex-col md:flex-row md:items-center gap-4 p-4 rounded-lg glass hover:glass-heavy transition-all duration-300"
+                    className="flex flex-col md:flex-row md:items-center gap-4 p-4 rounded-lg glass hover:glass-heavy transition-all duration-300 mb-4"
                   >
-                    <div className="font-semibold text-primary min-w-[100px]">
+                    <div className="font-semibold text-purple-400 min-w-[100px]">
                       {evt.time}
                     </div>
                     <div className="flex-1">
-                      <div className="font-medium text-foreground">{evt.event}</div>
-                      <div className="text-sm text-muted-foreground flex items-center space-x-1">
+                      <div className="font-medium text-white">{evt.event}</div>
+                      <div className="text-sm text-gray-300 flex items-center space-x-1">
                         <MapPin className="h-3 w-3" />
                         <span>{evt.location}</span>
                       </div>
@@ -588,17 +800,17 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
               Registration Statistics
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-gray-300">
               Join thousands of students in this technical excellence journey
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <div className="glass-card text-center animate-glow">
-              <Users className="h-8 w-8 mx-auto mb-4 text-primary" />
+              <Users className="h-8 w-8 mx-auto mb-4 text-purple-400" />
               <div className="text-3xl font-bold text-gradient">
                 {registrationStats.total}
               </div>
-              <div className="text-sm text-muted-foreground">Total Registrations</div>
+              <div className="text-sm text-gray-300">Total Registrations</div>
             </div>
             {events.map((event, index) => (
               <div
@@ -606,11 +818,11 @@ const Index = () => {
                 className="glass-card text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Trophy className="h-8 w-8 mx-auto mb-4 text-secondary" />
+                <Trophy className="h-8 w-8 mx-auto mb-4 text-blue-400" />
                 <div className="text-3xl font-bold text-gradient">
                   {event.registrations}
                 </div>
-                <div className="text-sm text-muted-foreground">{event.title}</div>
+                <div className="text-sm text-gray-300">{event.title}</div>
               </div>
             ))}
           </div>
@@ -630,7 +842,7 @@ const Index = () => {
                   className="w-20 glow mx-auto md:mx-0"
                 />
                 <h3 className="text-xl font-bold text-gradient">AMOGHA 2K25</h3>
-                <p className="text-muted-foreground">
+                <p className="text-gray-300">
                   National Level Student Technical Symposium empowering the next
                   generation of tech innovators.
                 </p>
@@ -638,38 +850,38 @@ const Index = () => {
 
               {/* Right Side - Contact */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-foreground">
+                <h4 className="text-lg font-semibold text-white">
                   Contact Information
                 </h4>
 
                 {/* Numbers in 2 columns on desktop */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-primary" />
+                    <Phone className="h-4 w-4 text-purple-400" />
                     <div>
-                      <div className="font-medium">Faculty Coordinator</div>
-                      <div className="text-muted-foreground">9441666995 (Hara Gopal V.P)</div>
+                      <div className="font-medium text-white">Faculty Coordinator</div>
+                      <div className="text-gray-300">9441666995 (Hara Gopal V.P)</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-primary" />
+                    <Phone className="h-4 w-4 text-purple-400" />
                     <div>
-                      <div className="font-medium">Faculty Coordinator</div>
-                      <div className="text-muted-foreground">9441666995 (Arun Babu)</div>
+                      <div className="font-medium text-white">Faculty Coordinator</div>
+                      <div className="text-gray-300">9441666995 (Arun Babu)</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-secondary" />
+                    <Phone className="h-4 w-4 text-blue-400" />
                     <div>
-                      <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted-foreground">7288846210 (Ismail N)</div>
+                      <div className="font-medium text-white">Student Coordinator</div>
+                      <div className="text-gray-300">7288846210 (Ismail N)</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-4 w-4 text-secondary" />
+                    <Phone className="h-4 w-4 text-blue-400" />
                     <div>
-                      <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted-foreground">9652162995 (Subahan S)</div>
+                      <div className="font-medium text-white">Student Coordinator</div>
+                      <div className="text-gray-300">9652162995 (Subahan S)</div>
                     </div>
                   </div>
                 </div>
@@ -679,23 +891,23 @@ const Index = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" 
                        fill="none" viewBox="0 0 24 24" 
                        strokeWidth={1.5} stroke="currentColor" 
-                       className="w-4 h-4 text-primary">
+                       className="w-4 h-4 text-purple-400">
                     <path strokeLinecap="round" strokeLinejoin="round" 
                       d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 
                          2.25 0 01-2.25-2.25V6.75m0 0l9 6 9-6m-18 0L12 
                          12.75 21.75 6.75" />
                   </svg>
                   <div>
-                    <div className="font-medium">Email</div>
-                    <div className="text-muted-foreground">amogha@rgmcet.edu.in</div>
+                    <div className="font-medium text-white">Email</div>
+                    <div className="text-gray-300">amogha@rgmcet.edu.in</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Bottom Section */}
-            <div className="mt-8 pt-8 border-t border-border text-center space-y-4">
-              <p className="text-muted-foreground">
+            <div className="mt-8 pt-8 border-t border-white/20 text-center space-y-4">
+              <p className="text-gray-300">
                 © 2025 AMOGHA 2K25. All rights reserved.
                 <span className="mx-2">•</span>
                 Rajeev Gandhi Memorial College of Engineering & Technology
@@ -706,14 +918,14 @@ const Index = () => {
                 href="https://ismailnportfolio.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-muted/40 hover:bg-muted/60 backdrop-blur-md shadow-sm transition hover:shadow-md"
+                className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md shadow-sm transition hover:shadow-md"
               >
                 <img
                   src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1754035126/ismail_nossam_passport_size_eaaqzl.jpg"
                   alt="Ismail Nossam"
-                  className="w-8 h-8 rounded-full object-cover border border-primary"
+                  className="w-8 h-8 rounded-full object-cover border border-purple-400"
                 />
-                <div className="text-sm font-medium text-foreground text-left">
+                <div className="text-sm font-medium text-white text-left">
                   <span className="block leading-tight">Website Designed By</span>
                   <span className="block font-semibold">Ismail Nossam</span>
                 </div>
