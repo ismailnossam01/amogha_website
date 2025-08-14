@@ -92,7 +92,7 @@ const eventDetails = {
     rounds: [
       {
         round: 'Abstract Submission',
-        description: 'Submit detailed abstract with methodology and expected outcomes',
+        description: 'Submit a detailed abstract including methodology and expected outcomes. Notification of paper acceptance will be given on 10th September.',
         duration: 'Deadline: 5 sep 2025'
       },
       {
@@ -378,7 +378,7 @@ const Index = () => {
             {/* Domains (Only for Paper Symposium) */}
             {event.domains && (
               <div className="glass-card">
-                <h3 className="text-xl font-bold text-gradient mb-4">Research Domains</h3>
+                <h3 className="text-xl font-bold text-gradient mb-4">The paper should be from these domains. You may also include other domains of your interest.</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {event.domains.map((domain, index) => (
                     <div key={index} className="flex items-center space-x-3 p-3 rounded-lg bg-muted/20 hover:bg-muted/30 transition-colors">
