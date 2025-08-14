@@ -37,7 +37,7 @@ const eventDetails = {
       'Bring your own laptop with preferred IDE setup',
       'Languages allowed: C, C++, Java, Python'
     ],
-    prizes: ['Winner: ₹15,000', '1st Runner-up: ₹10,000', '2nd Runner-up: ₹5,000'],
+    prizes: ['Winner: Attractive Cash Prizes', '1st Runner-up: Attractive Cash Prizes', '2nd Runner-up: Attractive Cash Prizes'],
     requirements: ['Laptop with coding environment', 'Valid college ID', 'Registration confirmation']
   },
   'Web-a-thon': {
@@ -64,7 +64,7 @@ const eventDetails = {
       'Original content and code required',
       'External APIs usage is permitted'
     ],
-    prizes: ['Winner: ₹12,000', '1st Runner-up: ₹8,000', '2nd Runner-up: ₹4,000'],
+    prizes: ['Winner: Attractive Cash Prizes', '1st Runner-up: Attractive Cash Prizes', '2nd Runner-up: Attractive Cash Prizes'],
     requirements: ['Laptop with web development setup', 'Code editor/IDE', 'Valid college ID']
   },
   'Paper Symposium': {
@@ -93,7 +93,7 @@ const eventDetails = {
       {
         round: 'Abstract Submission',
         description: 'Submit detailed abstract with methodology and expected outcomes',
-        duration: 'Deadline: 15 days before event'
+        duration: 'Deadline: 5 sep 2025'
       },
       {
         round: 'Final Presentation',
@@ -108,7 +108,7 @@ const eventDetails = {
       'Working prototype/demo is highly appreciated',
       'All team members should participate in Q&A'
     ],
-    prizes: ['Best Paper: ₹10,000', 'Best Innovation: ₹7,000', 'Best Presentation: ₹3,000'],
+    prizes: ['Best Paper: Attractive Cash Prizes', 'Best Innovation: Attractive Cash Prizes', 'Best Presentation: Attractive Cash Prizes'],
     requirements: ['Research paper/abstract', 'Presentation slides', 'Valid college ID']
   },
   'Technical Quiz': {
@@ -140,7 +140,7 @@ const eventDetails = {
       'Discussion allowed within team for 30 seconds',
       'Tie-breaker questions in case of draw'
     ],
-    prizes: ['Winner: ₹8,000', '1st Runner-up: ₹5,000', '2nd Runner-up: ₹2,000'],
+    prizes: ['Winner: Attractive Cash Prizes', '1st Runner-up: Attractive Cash Prizes', '2nd Runner-up: Attractive Cash Prizes'],
     requirements: ['Valid college ID', 'Team registration', 'Writing materials provided']
   },
   'Workshop': {
@@ -167,7 +167,7 @@ const eventDetails = {
       'Active participation encouraged',
       'Certificate provided to all attendees'
     ],
-    prizes: ['Participation Certificate', 'Best Project: ₹3,000', 'Active Learner Award: ₹1,000'],
+    prizes: ['Participation Certificate', 'Best Project: Attractive Cash Prizes', 'Active Learner Award: Attractive Cash Prizes'],
     requirements: ['Laptop with required software', 'Basic programming knowledge', 'Valid college ID']
   }
 };
@@ -533,9 +533,9 @@ const Index = () => {
           />
           </div>
             <p className="text-muted-foreground mt-4 text-sm">
-              Departments of CSE (AI & ML) and CSE & BS
+              Rajeev Gandhi Memorial College of Engineering & Technology(Autonomous), Nandyal, Andhra Pradesh.
               <br />
-              Rajeev Gandhi Memorial College of Engineering & Technology
+              Departments of CSE (AI & ML) and CSE & BS
             </p>
         </div>
 
