@@ -533,7 +533,7 @@ const Index = () => {
           />
           </div>
             <p className="text-muted-foreground mt-4 text-sm">
-              Rajeev Gandhi Memorial College of Engineering & Technology(Autonomous), Nandyal, Andhra Pradesh.
+              Rajeev Gandhi Memorial College of Engineering & Technology (Autonomous), Nandyal, Andhra Pradesh.
               <br />
               Departments of CSE (AI & ML) and CSE & BS
             </p>
