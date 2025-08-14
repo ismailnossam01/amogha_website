@@ -513,30 +513,31 @@ const Index = () => {
                 <span className="text-foreground font-medium">RGMCET</span>
               </div>
             </div>
+            
+            {/* Logos Section */}
+          <div className="flex justify-center items-center gap-4 mt-4 flex-wrap">
+            <img
+                src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/logo_tdooap.jpg"
+                  alt="RGMCET Logo"
+                  className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
+            />
+          <img
+              src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/IEEE_CIS_RGMCET_a6sldg.png"
+            alt="IEEE RGMCET Logo"
+              className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
+          />
+          <img
+                src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077005/IEEE_CIS_RGMCET_1_vnmcsq.png"
+                alt="IIC Logo"
+                className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
+          />
+          </div>
             <p className="text-muted-foreground mt-4 text-sm">
               Departments of CSE (AI & ML) and CSE & BS
               <br />
               Rajeev Gandhi Memorial College of Engineering & Technology
             </p>
-            {/* Logos Section */}
-  <div className="flex justify-center items-center gap-4 mt-4 flex-wrap">
-    <img
-      src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/logo_tdooap.jpg"
-      alt="RGMCET Logo"
-      className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
-    />
-    <img
-      src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/IEEE_CIS_RGMCET_a6sldg.png"
-      alt="IEEE RGMCET Logo"
-      className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
-    />
-    <img
-      src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077005/IEEE_CIS_RGMCET_1_vnmcsq.png"
-      alt="IIC Logo"
-      className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
-    />
-  </div>
-          </div>
+        </div>
 
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
