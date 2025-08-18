@@ -43,7 +43,7 @@ const eventDetails = {
   'Web-a-thon': {
     title: 'Web-a-thon',
     description: 'Creative web development competition focusing on innovative UI/UX design and modern frameworks.',
-    teamSize: '1-3 participants per team',
+    teamSize: '1-2 participants per team',
     duration: '6 hours',
     rounds: [
       {
@@ -70,7 +70,7 @@ const eventDetails = {
   'Paper Symposium': {
     title: 'Paper Symposium',
     description: 'Academic research presentation platform for emerging technologies and technical innovations.',
-    teamSize: '1-4 participants per team',
+    teamSize: '1-2 participants per team',
     duration: '15 minutes per presentation',
     domains: [
       'Artificial Intelligence & Machine Learning',
