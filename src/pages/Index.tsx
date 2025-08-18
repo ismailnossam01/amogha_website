@@ -498,46 +498,52 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           {/* Info Card */}
           <div className="glass-card max-w-4xl mx-auto mb-20 p-6 text-center">
-            <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">
-              National Level Student Technical Symposium
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base justify-center">
-              <div className="flex items-center justify-center space-x-3">
-                <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-bold text-lg text-primary">
-                  19 | 20 September 2025
-                </span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="h-5 w-5 text-secondary" />
-                <span className="text-foreground font-medium">RGMCET</span>
-              </div>
-            </div>
-            
-            {/* Logos Section */}
-          <div className="flex justify-center items-center gap-4 mt-4 flex-wrap">
-            <img
-                src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/logo_tdooap.jpg"
-                  alt="RGMCET Logo"
-                  className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
-            />
-          <img
-              src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/IEEE_CIS_RGMCET_a6sldg.png"
-            alt="IEEE RGMCET Logo"
-              className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
-          />
-          <img
-                src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077005/IEEE_CIS_RGMCET_1_vnmcsq.png"
-                alt="IIC Logo"
-                className="h-14 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
-          />
-          </div>
-            <p className="text-muted-foreground mt-4 text-sm">
-              Rajeev Gandhi Memorial College of Engineering & Technology (Autonomous), Nandyal, Andhra Pradesh.
-              <br />
-              Departments of CSE (AI & ML) and CSE & BS
-            </p>
-        </div>
+  <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">
+    National Level Student Technical Symposium
+  </p>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base justify-center">
+    <div className="flex items-center justify-center space-x-3">
+      <Calendar className="h-5 w-5 text-primary" />
+      <span className="font-bold text-lg text-primary">
+        19 | 20 September 2025
+      </span>
+    </div>
+    <div className="flex items-center justify-center space-x-3">
+      <MapPin className="h-5 w-5 text-secondary" />
+      <span className="text-foreground font-medium">RGMCET</span>
+    </div>
+  </div>
+  
+  {/* Logos Section */}
+  <div className="flex justify-center items-center gap-4 mt-6 flex-wrap">
+    <img
+      src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/logo_tdooap.jpg"
+      alt="RGMCET Logo"
+      className="h-16 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
+    />
+    <img
+      src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077003/IEEE_CIS_RGMCET_a6sldg.png"
+      alt="IEEE RGMCET Logo"
+      className="h-16 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
+    />
+    <img
+      src="https://res.cloudinary.com/dirtmiqzt/image/upload/v1755077005/IEEE_CIS_RGMCET_1_vnmcsq.png"
+      alt="IIC Logo"
+      className="h-16 w-auto object-contain rounded-lg border border-gray-200 p-1 bg-white"
+    />
+  </div>
+
+  <p className="mt-6 text-base md:text-lg">
+    <span className="font-bold text-primary text-xl md:text-2xl">
+      Rajeev Gandhi Memorial College of Engineering & Technology (Autonomous), Nandyal, Andhra Pradesh
+    </span>
+    <br />
+    <span className="text-foreground font-medium">
+      Departments of CSE (AI & ML) and CSE & BS
+    </span>
+  </p>
+</div>
+
 
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
