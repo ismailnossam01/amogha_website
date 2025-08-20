@@ -114,7 +114,7 @@ const eventDetails = {
   'Technical Quiz': {
     title: 'Technical Quiz',
     description: 'Interactive knowledge competition testing expertise in computer science and technology domains.',
-    teamSize: '2 participants per team',
+    teamSize: 'Individual participation',
     duration: '2 hours',
     rounds: [
       {
