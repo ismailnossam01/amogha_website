@@ -15,160 +15,172 @@ import workshopImg from '@/assets/workshop.jpg';
 const eventDetails = {
   'Code-a-thon': {
     title: 'Code-a-thon',
-    description: 'Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.',
-    teamSize: '1-2 participants per team',
-    duration: '4 hours',
-    rounds: [
-      {
-        round: 'Round 1: Online Qualifying',
-        description: 'Basic programming problems to filter participants',
-        duration: '2 hours'
-      },
-      {
-        round: 'Round 2: Final Coding Challenge',
-        description: 'Advanced algorithmic problems with complex data structures',
-        duration: '4 hours'
-      }
-    ],
-    rules: [
-      'Teams can have maximum 2 members',
-      'Use of internet is allowed for documentation only',
-      'Plagiarism will lead to immediate disqualification',
-      'Bring your own laptop with preferred IDE setup',
-      'Languages allowed: C, C++, Java, Python'
-    ],
-    prizes: ['Winner: Attractive Cash Prizes', '1st Runner-up: Attractive Cash Prizes', '2nd Runner-up: Attractive Cash Prizes'],
-    requirements: ['Laptop with coding environment', 'Valid college ID', 'Registration confirmation']
+    description: `Competitive programming challenge showcasing algorithmic problem-solving skills and coding excellence.
+
+**Event Structure:**
+• **Team Size:** 1-2 participants per team
+• **Duration:** 4 hours
+• **Registration:** Individual participation allowed
+
+**Event Rounds:**
+• **Round 1: Online Qualifying** - Basic programming problems to filter participants (Duration: 2 hours)
+• **Round 2: Final Coding Challenge** - Advanced algorithmic problems with complex data structures (Duration: 4 hours)
+
+**Rules & Regulations:**
+• Teams can have maximum 2 members
+• Use of internet is allowed for documentation only
+• Plagiarism will lead to immediate disqualification
+• Bring your own laptop with preferred IDE setup
+• Languages allowed: C, C++, Java, Python
+
+**Prize Distribution:**
+• Winner: Attractive Cash Prizes
+• 1st Runner-up: Attractive Cash Prizes
+• 2nd Runner-up: Attractive Cash Prizes
+
+**Requirements:**
+• Laptop with coding environment
+• Valid college ID
+• Registration confirmation`
   },
   'Web-a-thon': {
     title: 'Web-a-thon',
-    description: 'Creative web development competition focusing on innovative UI/UX design and modern frameworks.',
-    teamSize: '1-2 participants per team',
-    duration: '6 hours',
-    rounds: [
-      {
-        round: 'Round 1: Design Mockup',
-        description: 'Create wireframes and design mockups for given theme',
-        duration: '2 hours'
-      },
-      {
-        round: 'Round 2: Development',
-        description: 'Build responsive website based on approved mockup',
-        duration: '4 hours'
-      }
-    ],
-    rules: [
-      'Teams can have maximum 3 members',
-      'Use of frameworks and libraries is allowed',
-      'Website must be responsive and mobile-friendly',
-      'Original content and code required',
-      'External APIs usage is permitted'
-    ],
-    prizes: ['Winner: Attractive Cash Prizes', '1st Runner-up: Attractive Cash Prizes', '2nd Runner-up: Attractive Cash Prizes'],
-    requirements: ['Laptop with web development setup', 'Code editor/IDE', 'Valid college ID']
+    description: `Creative web development competition focusing on innovative UI/UX design and modern frameworks.
+
+**Event Structure:**
+• **Team Size:** 1-2 participants per team
+• **Duration:** 6 hours
+• **Focus:** UI/UX design and modern web frameworks
+
+**Event Rounds:**
+• **Round 1: Design Mockup** - Create wireframes and design mockups for given theme (Duration: 2 hours)
+• **Round 2: Development** - Build responsive website based on approved mockup (Duration: 4 hours)
+
+**Rules & Regulations:**
+• Teams can have maximum 3 members
+• Use of frameworks and libraries is allowed
+• Website must be responsive and mobile-friendly
+• Original content and code required
+• External APIs usage is permitted
+
+**Prize Distribution:**
+• Winner: Attractive Cash Prizes
+• 1st Runner-up: Attractive Cash Prizes
+• 2nd Runner-up: Attractive Cash Prizes
+
+**Requirements:**
+• Laptop with web development setup
+• Code editor/IDE
+• Valid college ID`
   },
   'Paper Symposium': {
     title: 'Paper Symposium',
-    description: 'Academic research presentation platform for emerging technologies and technical innovations.',
-    teamSize: '1-2 participants per team',
-    duration: '15 minutes per presentation',
-    domains: [
-      'Artificial Intelligence & Machine Learning',
-      'Internet of Things (IoT)',
-      'Blockchain Technology',
-      'Cybersecurity & Privacy',
-      'Cloud Computing',
-      'Data Science & Big Data Analytics',
-      'Quantum Computing',
-      'Augmented Reality & Virtual Reality',
-      'Computer Vision',
-      'Natural Language Processing',
-      'Edge Computing',
-      'DevOps & Automation',
-      'Mobile Application Development',
-      'Web3 & Decentralized Applications',
-      'Robotics & Automation'
-    ],
-    rounds: [
-      {
-        round: 'Abstract Submission',
-        description: 'Submit a detailed abstract including methodology and expected outcomes. Notification of paper acceptance will be given on 10th September.',
-        duration: 'Deadline: 5 sep 2025'
-      },
-      {
-        round: 'Final Presentation',
-        description: 'Present your research with live demonstration if applicable',
-        duration: '15 minutes presentation + 5 minutes Q&A'
-      }
-    ],
-    rules: [
-      'Teams can have maximum 4 members',
-      'Abstract must be original and unpublished',
-      'PPT format mandatory for presentation',
-      'Working prototype/demo is highly appreciated',
-      'All team members should participate in Q&A'
-    ],
-    prizes: ['Best Paper: Attractive Cash Prizes', 'Best Innovation: Attractive Cash Prizes', 'Best Presentation: Attractive Cash Prizes'],
-    requirements: ['Research paper/abstract', 'Presentation slides', 'Valid college ID']
+    description: `Academic research presentation platform for emerging technologies and technical innovations.
+
+**Event Structure:**
+• **Team Size:** 1-2 participants per team
+• **Duration:** 15 minutes per presentation
+• **Format:** Research presentation with Q&A session
+
+**Acceptable Domains:**
+The paper should be from these domains. You may also include other domains of your interest:
+• Artificial Intelligence & Machine Learning
+• Internet of Things (IoT)
+• Blockchain Technology
+• Cybersecurity & Privacy
+• Cloud Computing
+• Data Science & Big Data Analytics
+• Quantum Computing
+• Augmented Reality & Virtual Reality
+• Computer Vision
+• Natural Language Processing
+• Edge Computing
+• DevOps & Automation
+• Mobile Application Development
+• Web3 & Decentralized Applications
+• Robotics & Automation
+
+**Event Rounds:**
+• **Abstract Submission** - Submit a detailed abstract including methodology and expected outcomes. Notification of paper acceptance will be given on 10th September (Deadline: 5 Sep 2025)
+• **Final Presentation** - Present your research with live demonstration if applicable (Duration: 15 minutes presentation + 5 minutes Q&A)
+
+**Rules & Regulations:**
+• Teams can have maximum 4 members
+• Abstract must be original and unpublished
+• PPT format mandatory for presentation
+• Working prototype/demo is highly appreciated
+• All team members should participate in Q&A
+
+**Prize Distribution:**
+• Best Paper: Attractive Cash Prizes
+• Best Innovation: Attractive Cash Prizes
+• Best Presentation: Attractive Cash Prizes
+
+**Requirements:**
+• Research paper/abstract
+• Presentation slides
+• Valid college ID`
   },
   'Technical Quiz': {
     title: 'Technical Quiz',
-    description: 'Interactive knowledge competition testing expertise in computer science and technology domains.',
-    teamSize: 'Individual participation',
-    duration: '2 hours',
-    rounds: [
-      {
-        round: 'Round 1: Written Preliminaries',
-        description: 'Multiple choice questions covering basic CS concepts',
-        duration: '45 minutes'
-      },
-      {
-        round: 'Round 2: Rapid Fire',
-        description: 'Quick-fire questions for qualified teams',
-        duration: '30 minutes'
-      },
-      {
-        round: 'Round 3: Final Buzzer',
-        description: 'Interactive buzzer round with visual/audio questions',
-        duration: '45 minutes'
-      }
-    ],
-    rules: [
-      'Exactly 2 members per team mandatory',
-      'No electronic devices allowed during quiz',
-      'Negative marking for wrong answers in final rounds',
-      'Discussion allowed within team for 30 seconds',
-      'Tie-breaker questions in case of draw'
-    ],
-    prizes: ['Winner: Attractive Cash Prizes', '1st Runner-up: Attractive Cash Prizes', '2nd Runner-up: Attractive Cash Prizes'],
-    requirements: ['Valid college ID', 'Team registration', 'Writing materials provided']
+    description: `Interactive knowledge competition testing expertise in computer science and technology domains.
+
+**Event Structure:**
+• **Team Size:** Individual participation
+• **Duration:** 2 hours
+• **Format:** Multi-round quiz competition
+
+**Event Rounds:**
+• **Round 1: Written Preliminaries** - Multiple choice questions covering basic CS concepts (Duration: 45 minutes)
+• **Round 2: Rapid Fire** - Quick-fire questions for qualified teams (Duration: 30 minutes)
+• **Round 3: Final Buzzer** - Interactive buzzer round with visual/audio questions (Duration: 45 minutes)
+
+**Rules & Regulations:**
+• Exactly 2 members per team mandatory
+• No electronic devices allowed during quiz
+• Negative marking for wrong answers in final rounds
+• Discussion allowed within team for 30 seconds
+• Tie-breaker questions in case of draw
+
+**Prize Distribution:**
+• Winner: Attractive Cash Prizes
+• 1st Runner-up: Attractive Cash Prizes
+• 2nd Runner-up: Attractive Cash Prizes
+
+**Requirements:**
+• Valid college ID
+• Team registration
+• Writing materials provided`
   },
   'Workshop': {
     title: 'Technical Workshop',
-    description: 'Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.',
-    teamSize: 'Individual participation',
-    duration: '3 hours',
-    rounds: [
-      {
-        round: 'Session 1: Theory & Concepts',
-        description: 'Fundamental concepts and real-world applications',
-        duration: '1.5 hours'
-      },
-      {
-        round: 'Session 2: Hands-on Practice',
-        description: 'Practical implementation and live coding',
-        duration: '1.5 hours'
-      }
-    ],
-    rules: [
-      'Individual participation only',
-      'Bring your own laptop',
-      'Pre-installation of required software recommended',
-      'Active participation encouraged',
-      'Certificate provided to all attendees'
-    ],
-    prizes: ['Participation Certificate', 'Best Project: Attractive Cash Prizes', 'Active Learner Award: Attractive Cash Prizes'],
-    requirements: ['Laptop with required software', 'Basic programming knowledge', 'Valid college ID']
+    description: `Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.
+
+**Event Structure:**
+• **Team Size:** Individual participation
+• **Duration:** 3 hours
+• **Focus:** Practical learning with industry experts
+
+**Event Sessions:**
+• **Session 1: Theory & Concepts** - Fundamental concepts and real-world applications (Duration: 1.5 hours)
+• **Session 2: Hands-on Practice** - Practical implementation and live coding (Duration: 1.5 hours)
+
+**Rules & Regulations:**
+• Individual participation only
+• Bring your own laptop
+• Pre-installation of required software recommended
+• Active participation encouraged
+• Certificate provided to all attendees
+
+**Prize Distribution:**
+• Participation Certificate
+• Best Project: Attractive Cash Prizes
+• Active Learner Award: Attractive Cash Prizes
+
+**Requirements:**
+• Laptop with required software
+• Basic programming knowledge
+• Valid college ID`
   }
 };
 
@@ -303,8 +315,6 @@ const Index = () => {
         <h3 className="text-xl font-bold text-gradient mb-3">{title}</h3>
         <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
         
-        
-        
         <div className="space-y-3">
           <button
             onClick={() => handleKnowMore(title)}
@@ -326,9 +336,60 @@ const Index = () => {
     </div>
   );
 
-  // Modal Component
+  // Simplified Modal Component
   const EventModal = ({ event, isOpen, onClose }) => {
     if (!isOpen || !event) return null;
+
+    // Function to format description with markdown-like syntax
+    const formatDescription = (text) => {
+      return text.split('\n').map((line, index) => {
+        // Handle bold headers
+        if (line.startsWith('**') && line.endsWith('**')) {
+          const headerText = line.slice(2, -2);
+          return (
+            <h3 key={index} className="text-lg font-bold text-primary mt-6 mb-3 first:mt-0">
+              {headerText}
+            </h3>
+          );
+        }
+        // Handle bullet points
+        else if (line.startsWith('• ')) {
+          const bulletText = line.slice(2);
+          // Check if it contains bold text
+          if (bulletText.includes('**')) {
+            const parts = bulletText.split('**');
+            return (
+              <div key={index} className="flex items-start space-x-3 mb-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">
+                  {parts.map((part, partIndex) => 
+                    partIndex % 2 === 1 ? 
+                    <strong key={partIndex} className="text-foreground font-semibold">{part}</strong> : 
+                    part
+                  )}
+                </span>
+              </div>
+            );
+          } else {
+            return (
+              <div key={index} className="flex items-start space-x-3 mb-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">{bulletText}</span>
+              </div>
+            );
+          }
+        }
+        // Handle regular paragraphs
+        else if (line.trim() !== '') {
+          return (
+            <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+              {line}
+            </p>
+          );
+        }
+        return null;
+      }).filter(Boolean);
+    };
 
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
@@ -347,101 +408,11 @@ const Index = () => {
           </div>
 
           {/* Scrollable Content */}
-          <div className="overflow-y-auto max-h-[calc(90vh-120px)] p-6 space-y-8">
-            {/* Basic Info */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="glass-card text-center">
-                <UserCheck className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <div className="font-semibold text-sm text-muted-foreground mb-1">Team Size</div>
-                <div className="font-bold text-foreground">{event.teamSize}</div>
-              </div>
-              
-              <div className="glass-card text-center">
-                <Clock className="h-8 w-8 mx-auto mb-2 text-secondary" />
-                <div className="font-semibold text-sm text-muted-foreground mb-1">Duration</div>
-                <div className="font-bold text-foreground">{event.duration}</div>
-              </div>
-              
-              <div className="glass-card text-center">
-                <Award className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <div className="font-semibold text-sm text-muted-foreground mb-1">Total Prizes</div>
-                <div className="font-bold text-foreground">{event.prizes.length} Categories</div>
-              </div>
-            </div>
-
-            {/* Description */}
+          <div className="overflow-y-auto max-h-[calc(90vh-120px)] p-6">
             <div className="glass-card">
-              <h3 className="text-xl font-bold text-gradient mb-4">About the Event</h3>
-              <p className="text-muted-foreground leading-relaxed">{event.description}</p>
-            </div>
-
-            {/* Domains (Only for Paper Symposium) */}
-            {event.domains && (
-              <div className="glass-card">
-                <h3 className="text-xl font-bold text-gradient mb-4">The paper should be from these domains. You may also include other domains of your interest.</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {event.domains.map((domain, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-3 rounded-lg bg-muted/20 hover:bg-muted/30 transition-colors">
-                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary" />
-                      <span className="text-sm font-medium text-foreground">{domain}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Rounds */}
-            <div className="glass-card">
-              <h3 className="text-xl font-bold text-gradient mb-4">Event Rounds</h3>
-              <div className="space-y-4">
-                {event.rounds.map((round, index) => (
-                  <div key={index} className="p-4 rounded-lg bg-muted/20 hover:bg-muted/30 transition-colors">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                      <h4 className="font-semibold text-primary">{round.round}</h4>
-                      <span className="text-sm font-medium text-secondary">{round.duration}</span>
-                    </div>
-                    <p className="text-muted-foreground text-sm">{round.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Rules */}
-            <div className="glass-card">
-              <h3 className="text-xl font-bold text-gradient mb-4">Rules & Regulations</h3>
-              <div className="space-y-3">
-                {event.rules.map((rule, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground text-sm leading-relaxed">{rule}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Prizes */}
-            <div className="glass-card">
-              <h3 className="text-xl font-bold text-gradient mb-4">Prize Distribution</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {event.prizes.map((prize, index) => (
-                  <div key={index} className="text-center p-4 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
-                    <Trophy className="h-8 w-8 mx-auto mb-2 text-primary" />
-                    <div className="font-bold text-foreground">{prize}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Requirements */}
-            <div className="glass-card">
-              <h3 className="text-xl font-bold text-gradient mb-4">Requirements</h3>
-              <div className="space-y-3">
-                {event.requirements.map((req, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary" />
-                    <span className="text-muted-foreground text-sm">{req}</span>
-                  </div>
-                ))}
+              <h3 className="text-xl font-bold text-gradient mb-6">About the Event</h3>
+              <div className="prose prose-sm max-w-none">
+                {formatDescription(event.description)}
               </div>
             </div>
           </div>
@@ -543,7 +514,6 @@ const Index = () => {
     </span>
   </p>
 </div>
-
 
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
