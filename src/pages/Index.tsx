@@ -20,15 +20,9 @@ const eventDetails = {
 **Event Structure:**
 • **Team Size:** 1-2 participants per team
 • **Duration:** 4 hours
-• **Registration:** Individual participation allowed
-
-**Event Rounds:**
-• **Round 1: Online Qualifying** - Basic programming problems to filter participants (Duration: 2 hours)
-• **Round 2: Final Coding Challenge** - Advanced algorithmic problems with complex data structures (Duration: 4 hours)
 
 **Rules & Regulations:**
 • Teams can have maximum 2 members
-• Use of internet is allowed for documentation only
 • Plagiarism will lead to immediate disqualification
 • Bring your own laptop with preferred IDE setup
 • Languages allowed: C, C++, Java, Python
@@ -39,7 +33,6 @@ const eventDetails = {
 • 2nd Runner-up: Attractive Cash Prizes
 
 **Requirements:**
-• Laptop with coding environment
 • Valid college ID
 • Registration confirmation`
   },
@@ -52,16 +45,12 @@ const eventDetails = {
 • **Duration:** 6 hours
 • **Focus:** UI/UX design and modern web frameworks
 
-**Event Rounds:**
-• **Round 1: Design Mockup** - Create wireframes and design mockups for given theme (Duration: 2 hours)
-• **Round 2: Development** - Build responsive website based on approved mockup (Duration: 4 hours)
 
 **Rules & Regulations:**
-• Teams can have maximum 3 members
+• Teams can have maximum 2 members
 • Use of frameworks and libraries is allowed
 • Website must be responsive and mobile-friendly
 • Original content and code required
-• External APIs usage is permitted
 
 **Prize Distribution:**
 • Winner: Attractive Cash Prizes
@@ -69,7 +58,6 @@ const eventDetails = {
 • 2nd Runner-up: Attractive Cash Prizes
 
 **Requirements:**
-• Laptop with web development setup
 • Code editor/IDE
 • Valid college ID`
   },
@@ -101,11 +89,11 @@ The paper should be from these domains. You may also include other domains of yo
 • Robotics & Automation
 
 **Event Rounds:**
-• **Abstract Submission** - Submit a detailed abstract including methodology and expected outcomes. Notification of paper acceptance will be given on 10th September (Deadline: 5 Sep 2025)
+• **Abstract Submission** - Submit a detailed abstract including methodology and expected outcomes.
 • **Final Presentation** - Present your research with live demonstration if applicable (Duration: 15 minutes presentation + 5 minutes Q&A)
 
 **Rules & Regulations:**
-• Teams can have maximum 4 members
+• Teams can have maximum 2 members
 • Abstract must be original and unpublished
 • PPT format mandatory for presentation
 • Working prototype/demo is highly appreciated
@@ -130,16 +118,9 @@ The paper should be from these domains. You may also include other domains of yo
 • **Duration:** 2 hours
 • **Format:** Multi-round quiz competition
 
-**Event Rounds:**
-• **Round 1: Written Preliminaries** - Multiple choice questions covering basic CS concepts (Duration: 45 minutes)
-• **Round 2: Rapid Fire** - Quick-fire questions for qualified teams (Duration: 30 minutes)
-• **Round 3: Final Buzzer** - Interactive buzzer round with visual/audio questions (Duration: 45 minutes)
-
 **Rules & Regulations:**
-• Exactly 2 members per team mandatory
 • No electronic devices allowed during quiz
 • Negative marking for wrong answers in final rounds
-• Discussion allowed within team for 30 seconds
 • Tie-breaker questions in case of draw
 
 **Prize Distribution:**
@@ -149,12 +130,11 @@ The paper should be from these domains. You may also include other domains of yo
 
 **Requirements:**
 • Valid college ID
-• Team registration
-• Writing materials provided`
+• registration`
   },
   'Workshop': {
     title: 'Technical Workshop',
-    description: `Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.
+    description: `Hands-on learning sessions with industry experts on "WALK WITH ROBO DOG".
 
 **Event Structure:**
 • **Team Size:** Individual participation
@@ -167,18 +147,11 @@ The paper should be from these domains. You may also include other domains of yo
 
 **Rules & Regulations:**
 • Individual participation only
-• Bring your own laptop
-• Pre-installation of required software recommended
 • Active participation encouraged
 • Certificate provided to all attendees
 
-**Prize Distribution:**
-• Participation Certificate
-• Best Project: Attractive Cash Prizes
-• Active Learner Award: Attractive Cash Prizes
-
 **Requirements:**
-• Laptop with required software
+• Laptop preffered
 • Basic programming knowledge
 • Valid college ID`
   }
