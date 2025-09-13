@@ -217,24 +217,21 @@ const Index = () => {
     {
       day: 'Day 1 - September 19, 2025',
       events: [
-        { time: '09:00 AM', event: 'Registration & Welcome', location: 'Main Auditorium' },
-        { time: '10:00 AM', event: 'Opening Ceremony', location: 'Main Auditorium' },
-        { time: '11:00 AM', event: 'Code-a-thon Begins', location: 'Computer Lab 1' },
-        { time: '11:00 AM', event: 'Paper Symposium - Session 1', location: 'Seminar Hall A' },
-        { time: '02:00 PM', event: 'Web-a-thon Kickoff', location: 'Computer Lab 2' },
-        { time: '03:30 PM', event: 'Technical Workshop', location: 'Conference Room' },
-        { time: '05:00 PM', event: 'Day 1 Wrap-up', location: 'Main Auditorium' }
+        { time: '09:00 AM', event: 'Registration & Welcome', location: 'Mechanical Gallery' },
+        { time: '10:00 AM', event: 'Code-a-thon Begins', location: 'Computer Labs' },
+        { time: '11:00 AM', event: 'Web-a-thon Begins', location: 'Computer Labs' },
+        { time: '01:00 PM', event: 'Technical Quiz', location: 'Mechanical Gallery' },
+        { time: '03:30 PM', event: 'Day 1 Wrap-up', location: 'Mechanical Gallery' }
       ]
     },
     {
       day: 'Day 2 - September 20, 2025',
       events: [
-        { time: '09:00 AM', event: 'Technical Quiz', location: 'Main Auditorium' },
-        { time: '11:00 AM', event: 'Paper Symposium - Session 2', location: 'Seminar Hall A' },
-        { time: '01:00 PM', event: 'Final Presentations', location: 'Main Auditorium' },
-        { time: '03:00 PM', event: 'Judging & Evaluation', location: 'Conference Room' },
-        { time: '04:30 PM', event: 'Award Ceremony', location: 'Main Auditorium' },
-        { time: '05:30 PM', event: 'Closing Ceremony', location: 'Main Auditorium' }
+        { time: '09:00 AM', event: 'Opening Ceremony', location: 'Mechanical Gallery' },
+        { time: '10:00 AM', event: 'Paper Symposium', location: 'Class Rooms' },
+        { time: '10:00 PM', event: 'Technical Workshop', location: 'Mechanical Gallery' },
+        { time: '3:00 PM', event: 'Award Ceremony', location: 'Mechanical Gallery' },
+        { time: '04:30 PM', event: 'Closing Ceremony', location: 'Mechanical Gallery' }
       ]
     }
   ];
