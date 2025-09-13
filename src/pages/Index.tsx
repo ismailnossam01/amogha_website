@@ -151,7 +151,7 @@ The paper should be from these domains. You may also include other domains of yo
 • Certificate provided to all attendees
 
 **Requirements:**
-• Laptop preffered
+• Laptop preferred
 • Basic programming knowledge
 • Valid college ID`
   }
