@@ -141,10 +141,6 @@ The paper should be from these domains. You may also include other domains of yo
 • **Duration:** 3 hours
 • **Focus:** Practical learning with industry experts
 
-**Event Sessions:**
-• **Session 1: Theory & Concepts** - Fundamental concepts and real-world applications (Duration: 1.5 hours)
-• **Session 2: Hands-on Practice** - Practical implementation and live coding (Duration: 1.5 hours)
-
 **Rules & Regulations:**
 • Individual participation only
 • Active participation encouraged
@@ -210,7 +206,7 @@ const Index = () => {
     {
       title: 'Workshop',
       description:
-        'Hands-on learning sessions with industry experts on AI, ML, and cutting-edge technologies.',
+        'Hands-on learning sessions with industry experts on AI & ML, "WALK WITH ROBO DOG"',
       image: workshopImg,
       registrations: registrationStats.workshop,
       registrationLink: 'https://forms.gle/3yAGmbLzhqxi3nyu8'
