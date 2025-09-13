@@ -101,8 +101,8 @@ The paper should be from these domains. You may also include other domains of yo
 
 **Prize Distribution:**
 • Best Paper: Attractive Cash Prizes
-• Best Innovation: Attractive Cash Prizes
-• Best Presentation: Attractive Cash Prizes
+• 1st Runner-up: Attractive Cash Prizes
+• 2nd Runner-up: Attractive Cash Prizes
 
 **Requirements:**
 • Research paper/abstract
