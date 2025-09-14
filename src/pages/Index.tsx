@@ -229,7 +229,7 @@ const Index = () => {
       events: [
         { time: '09:00 AM', event: 'Opening Ceremony', location: 'Mechanical Gallery' },
         { time: '10:00 AM', event: 'Paper Symposium', location: 'Class Rooms' },
-        { time: '10:00 PM', event: 'Technical Workshop', location: 'Mechanical Gallery' },
+        { time: '10:00 AM', event: 'Technical Workshop', location: 'Mechanical Gallery' },
         { time: '3:00 PM', event: 'Award Ceremony', location: 'Mechanical Gallery' },
         { time: '04:30 PM', event: 'Closing Ceremony', location: 'Mechanical Gallery' }
       ]
