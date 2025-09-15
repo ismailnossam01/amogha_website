@@ -34,7 +34,12 @@ const eventDetails = {
 
 **Requirements:**
 • Valid college ID
-• Registration confirmation`
+• Registration confirmation
+
+**Contact:**
+• For any details regarding to the Code-a-thon event please contact.
+• 9182792708 (Charan)
+• 8919685807 (Kalpana)`
   },
   'Web-a-thon': {
     title: 'Web-a-thon',
@@ -59,7 +64,12 @@ const eventDetails = {
 
 **Requirements:**
 • Code editor/IDE
-• Valid college ID`
+• Valid college ID
+
+**Contact:**
+• For any details regarding to the Web-a-thon event please contact.
+• 9392992880 (Ravi)
+• 9281450282 (Shaista)`
   },
   'Paper Symposium': {
     title: 'Paper Symposium',
@@ -107,7 +117,12 @@ The paper should be from these domains. You may also include other domains of yo
 **Requirements:**
 • Research paper/abstract
 • Presentation slides
-• Valid college ID`
+• Valid college ID
+
+**Contact:**
+• For any details regarding to the Paper Symposium event please contact.
+• 7013895558 (Manoj Kumar)
+• 8374072538 (Haritha)`
   },
   'Technical Quiz': {
     title: 'Technical Quiz',
@@ -130,7 +145,12 @@ The paper should be from these domains. You may also include other domains of yo
 
 **Requirements:**
 • Valid college ID
-• registration`
+• registration
+
+**Contact:**
+• For any details regarding to the Technical Quiz event please contact.
+• 7013528213 (Mojesh)
+• 9063430680 (Munna)`
   },
   'Workshop': {
     title: 'Technical Workshop',
@@ -149,7 +169,12 @@ The paper should be from these domains. You may also include other domains of yo
 **Requirements:**
 • Laptop preferred
 • Basic programming knowledge
-• Valid college ID`
+• Valid college ID
+
+**Contact:**
+• For any details regarding to the Workshop event please contact.
+• 8639975495 (Madhusudhan)
+• 9346363193 (Tejaswini)`
   }
 };
 
