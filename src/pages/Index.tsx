@@ -623,16 +623,53 @@ const Index = () => {
                     <Phone className="h-4 w-4 text-secondary" />
                     <div>
                       <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted-foreground">7288846210 (Ismail N)</div>
+                      <div className="text-muted-foreground">7288846210 (Ismail)</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-4 w-4 text-secondary" />
                     <div>
                       <div className="font-medium">Student Coordinator</div>
-                      <div className="text-muted-foreground">9652162995 (Subahan S)</div>
+                      <div className="text-muted-foreground">9652162995 (Subahan)</div>
                     </div>
                   </div>
+                  {/* Event Lead Contacts */}
+                  <div className="flex items-center space-x-3">
+                    <Phone className="h-4 w-4 text-secondary" />
+                    <div>
+                      <div className="font-medium">Code-a-thon</div>
+                      <div className="text-muted-foreground">9182792708 (Charan), 8919685807 (Kalpana)</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="h-4 w-4 text-secondary" />
+                    <div>
+                      <div className="font-medium">Web-a-thon</div>
+                      <div className="text-muted-foreground">9392992880 (Ravi), 9281450282 (Shaista)</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="h-4 w-4 text-secondary" />
+                    <div>
+                      <div className="font-medium">Paper Symposium</div>
+                      <div className="text-muted-foreground">7013895558 (Manoj Kumar), 8374072538 (Haritha)</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="h-4 w-4 text-secondary" />
+                    <div>
+                      <div className="font-medium">Technical Quiz</div>
+                      <div className="text-muted-foreground">7013528213 (Mojesh), 9063430680 (Munna)</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="h-4 w-4 text-secondary" />
+                    <div>
+                      <div className="font-medium">Workshop</div>
+                      <div className="text-muted-foreground">8639975495 (Madhusudhan), 9346363193 (Tejaswini )</div>
+                    </div>
+                  </div>
+                  
                 </div>
 
                 {/* Email */}
