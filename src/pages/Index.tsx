@@ -598,10 +598,11 @@ const Index = () => {
                 </div>
                 <div className="text-sm text-muted-foreground">{event.title}</div>
               </div>
-            ))}
-            <p className="text-xl text-muted-foreground">
+      <p className="text-xl text-muted-foreground">
               Join in this technical excellence journey
           </p>
+            ))}
+            
           </div>
           
         </div>
