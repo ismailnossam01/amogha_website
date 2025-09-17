@@ -180,12 +180,12 @@ The paper should be from these domains. You may also include other domains of yo
 
 const Index = () => {
   const [registrationStats] = useState({
-    total: 156,
+    total: 160,
     codeAThon: 33,
     webAThon: 13,
     paperSymposium: 18,
-    technicalQuiz: 34,
-    workshop: 58
+    technicalQuiz: 35,
+    workshop: 61
   });
 
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -578,7 +578,7 @@ const Index = () => {
               Join in this technical excellence journey
             </p>
             <p className="text-xl text-muted-foreground">
-              Total Registrations till 17-09-2025
+              Total Registrations till 17-09-2025 18:58
           </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
