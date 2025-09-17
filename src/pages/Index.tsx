@@ -577,6 +577,9 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">
               Join in this technical excellence journey
             </p>
+            <p className="text-xl text-muted-foreground">
+              Total Registrations till 17-09-2025
+          </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <div className="glass-card text-center animate-glow">
@@ -598,9 +601,7 @@ const Index = () => {
                 </div>
                 <div className="text-sm text-muted-foreground">{event.title}</div>
               </div>
-      <p className="text-xl text-muted-foreground">
-              Join in this technical excellence journey
-          </p>
+      
             ))}
             
           </div>
