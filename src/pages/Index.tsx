@@ -578,7 +578,7 @@ const Index = () => {
               Join in this technical excellence journey
             </p>
             <p className="text-xl text-muted-foreground">
-              Total Registrations till 17-09-2025 18:58
+              Total Registrations till 19-09-2025 07:28
           </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
