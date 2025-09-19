@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Navbar } from '@/components/navbar';
 import { CountdownTimer } from '@/components/countdown-timer';
 import { EventCard } from '@/components/event-card';
-import { Calendar, Users, Trophy, MapPin, Phone, X, Clock, Award, UserCheck } from 'lucide-react';
+import { Calendar, Users, Trophy, MapPin, Phone, X, Clock, Award, UserCheck, Building2, GraduationCap } from 'lucide-react';
 
 import amoghaPoster from '@/assets/amogha-poster.png';
 import codeAThonImg from '@/assets/code-a-thon.jpg';
@@ -186,6 +186,35 @@ const Index = () => {
     paperSymposium: 35,
     technicalQuiz: 119,
     workshop: 140
+  });
+
+  // Participant breakdown data
+  const [participantStats] = useState({
+    'Code-a-thon': {
+      total: 53,
+      rgmcet: 25,
+      outside: 28
+    },
+    'Web-a-thon': {
+      total: 40,
+      rgmcet: 18,
+      outside: 22
+    },
+    'Paper Symposium': {
+      total: 35,
+      rgmcet: 15,
+      outside: 20
+    },
+    'Technical Quiz': {
+      total: 119,
+      rgmcet: 60,
+      outside: 59
+    },
+    'Workshop': {
+      total: 140,
+      rgmcet: 75,
+      outside: 65
+    }
   });
 
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -606,6 +635,75 @@ const Index = () => {
             
           </div>
           
+        </div>
+      </section>
+
+      {/* Total Participants Section */}
+      <section id="participants" className="py-20 px-4 observe-me bg-background/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Total Participants
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Participant breakdown by institution
+            </p>
+          </div>
+          
+          <div className="glass-card">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(participantStats).map(([eventName, stats], index) => (
+                <div
+                  key={eventName}
+                  className="glass-card bg-background/30 hover:bg-background/50 transition-all duration-300 transform hover:-translate-y-1"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Event Name */}
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-gradient mb-2">
+                      {eventName}
+                    </h3>
+                  </div>
+
+                  {/* Total Participants */}
+                  <div className="text-center mb-6">
+                    <div className="flex items-center justify-center mb-2">
+                      <Users className="h-6 w-6 text-primary mr-2" />
+                      <span className="text-sm text-muted-foreground">Total Participants</span>
+                    </div>
+                    <div className="text-3xl font-bold text-gradient">
+                      {stats.total}
+                    </div>
+                  </div>
+
+                  {/* Breakdown */}
+                  <div className="space-y-4">
+                    {/* RGMCET Count */}
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-primary/10 border border-primary/20">
+                      <div className="flex items-center space-x-2">
+                        <Building2 className="h-5 w-5 text-primary" />
+                        <span className="font-medium text-foreground">From RGMCET</span>
+                      </div>
+                      <div className="text-xl font-bold text-primary">
+                        {stats.rgmcet}
+                      </div>
+                    </div>
+
+                    {/* Outside Colleges Count */}
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-secondary/10 border border-secondary/20">
+                      <div className="flex items-center space-x-2">
+                        <GraduationCap className="h-5 w-5 text-secondary" />
+                        <span className="font-medium text-foreground">From Outside Colleges</span>
+                      </div>
+                      <div className="text-xl font-bold text-secondary">
+                        {stats.outside}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
