@@ -180,11 +180,11 @@ The paper should be from these domains. You may also include other domains of yo
 
 const Index = () => {
   const [registrationStats] = useState({
-    total: 387,
+    total: 390,
     codeAThon: 53,
     webAThon: 40,
-    paperSymposium: 35,
-    technicalQuiz: 119,
+    paperSymposium: 32,
+    technicalQuiz: 125,
     workshop: 140
   });
 
