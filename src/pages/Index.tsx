@@ -191,9 +191,9 @@ const Index = () => {
   // Participant breakdown data
   const [participantStats] = useState({
     'Code-a-thon': {
-      total: 56,
-      rgmcet: 43,
-      outside: 13
+      total: 97,
+      rgmcet: 71,
+      outside: 26
     },
     'Web-a-thon': {
       total: 79,
@@ -216,9 +216,9 @@ const Index = () => {
       outside: 25
     },
     'Toal Participants': {
-      total: 464,
-      rgmcet: 358,
-      outside: 106
+      total: 505,
+      rgmcet: 386,
+      outside: 119
     }
   });
 
