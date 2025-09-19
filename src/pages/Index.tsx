@@ -191,29 +191,34 @@ const Index = () => {
   // Participant breakdown data
   const [participantStats] = useState({
     'Code-a-thon': {
-      total: 53,
-      rgmcet: 25,
-      outside: 28
+      total: 56,
+      rgmcet: 43,
+      outside: 13
     },
     'Web-a-thon': {
-      total: 40,
-      rgmcet: 18,
-      outside: 22
-    },
-    'Paper Symposium': {
-      total: 35,
-      rgmcet: 15,
+      total: 79,
+      rgmcet: 59,
       outside: 20
     },
+    'Paper Symposium': {
+      total: 64,
+      rgmcet: 20,
+      outside: 44
+    },
     'Technical Quiz': {
-      total: 119,
-      rgmcet: 60,
-      outside: 59
+      total: 125,
+      rgmcet: 121,
+      outside: 4
     },
     'Workshop': {
       total: 140,
-      rgmcet: 75,
-      outside: 65
+      rgmcet: 115,
+      outside: 25
+    },
+    'Toal Participants': {
+      total: 464,
+      rgmcet: 358,
+      outside: 106
     }
   });
 
